@@ -1,0 +1,339 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/Andoslash
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Riot-Token:
+      - RIOT_API_KEY
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 22 Aug 2019  16:29:00 GMT
+      Vary:
+      - Accept-Encoding
+      X-App-Rate-Limit:
+      - 500:10,30000:600
+      X-App-Rate-Limit-Count:
+      - 13:10,135:600
+      X-Method-Rate-Limit:
+      - 2000:60
+      X-Method-Rate-Limit-Count:
+      - 21:60
+      X-Riot-Edge-Trace-Id:
+      - 14d81008-1522-464b-8491-03703c039d9d
+      Content-Length:
+      - '292'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"KAlpQjRnwhQJ_eXZ0QxOEMEX-qK5_v7_TgZWJaHH1i-mG0g","accountId":"527N1B3AiYQ_Ud_WPcs0SXfT0_xzrtLXM2xjISJXwnee-Q","puuid":"Ydd-Jx3QiFOw8t8-mkVGTA70KrfVqIuKtWQiz6_T6zmGhgGwwDj1ir6W6l7C1m1G1UIJA3bWUBqpGA","name":"Andoslash","profileIconId":11,"revisionDate":1495767147000,"summonerLevel":15}'
+    http_version:
+  recorded_at: Thu, 22 Aug 2019 16:29:00 GMT
+- request:
+    method: get
+    uri: https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/KAlpQjRnwhQJ_eXZ0QxOEMEX-qK5_v7_TgZWJaHH1i-mG0g
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Riot-Token:
+      - RIOT_API_KEY
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 22 Aug 2019  16:29:00 GMT
+      Vary:
+      - Accept-Encoding
+      X-App-Rate-Limit:
+      - 500:10,30000:600
+      X-App-Rate-Limit-Count:
+      - 14:10,136:600
+      X-Method-Rate-Limit:
+      - 20000:10,1200000:600
+      X-Method-Rate-Limit-Count:
+      - 4:10,38:600
+      X-Riot-Edge-Trace-Id:
+      - f2d0a604-494a-43cf-88f7-bdebe1240c15
+      Content-Length:
+      - '2'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version:
+  recorded_at: Thu, 22 Aug 2019 16:29:00 GMT
+- request:
+    method: get
+    uri: https://euw1.api.riotgames.com/lol/match/v4/matchlists/by-account/527N1B3AiYQ_Ud_WPcs0SXfT0_xzrtLXM2xjISJXwnee-Q
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Riot-Token:
+      - RIOT_API_KEY
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,Region,Cookie
+      Access-Control-Allow-Methods:
+      - GET,POST,OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Ray:
+      - 50a639211bdaa65d-DUB
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 22 Aug 2019 16:29:01 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Vary:
+      - Accept-Encoding
+      X-App-Rate-Limit:
+      - 500:10,30000:600
+      X-App-Rate-Limit-Count:
+      - 15:10,137:600
+      X-Method-Rate-Limit:
+      - '1000:10'
+      X-Method-Rate-Limit-Count:
+      - '3:10'
+      X-Riot-Edge-Trace-Id:
+      - a49a33f8-0166-4c3b-a321-bea419b04447
+      Content-Length:
+      - '57'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"status":{"message":"Data not found","status_code":404}}'
+    http_version:
+  recorded_at: Thu, 22 Aug 2019 16:29:01 GMT
+- request:
+    method: get
+    uri: https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/KAlpQjRnwhQJ_eXZ0QxOEMEX-qK5_v7_TgZWJaHH1i-mG0g
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Riot-Token:
+      - RIOT_API_KEY
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - public, max-age=3600
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 22 Aug 2019  16:29:01 GMT
+      Vary:
+      - Accept-Encoding
+      X-App-Rate-Limit:
+      - 500:10,30000:600
+      X-App-Rate-Limit-Count:
+      - 16:10,138:600
+      X-Method-Rate-Limit:
+      - 300:60
+      X-Method-Rate-Limit-Count:
+      - 20:60
+      X-Riot-Edge-Trace-Id:
+      - 7f536915-8051-4633-800b-deed4d4f0843
+      Content-Length:
+      - '2'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version:
+  recorded_at: Thu, 22 Aug 2019 16:29:01 GMT
+- request:
+    method: get
+    uri: https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/Zerp357
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Riot-Token:
+      - RIOT_API_KEY
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 22 Aug 2019  16:29:01 GMT
+      Vary:
+      - Accept-Encoding
+      X-App-Rate-Limit:
+      - 500:10,30000:600
+      X-App-Rate-Limit-Count:
+      - 17:10,139:600
+      X-Method-Rate-Limit:
+      - 2000:60
+      X-Method-Rate-Limit-Count:
+      - 22:60
+      X-Riot-Edge-Trace-Id:
+      - 6aa1316f-3ef8-4e11-8172-ffdc21a41f3b
+      Content-Length:
+      - '292'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ","accountId":"85MUAYUUItGbK5tir4zBajFXUJ12WDlD0GuVF63oYtHbRg","puuid":"Kk9BJcF89zN4Et0_CsqouYtcNLNR9zxRHZUCQ7yzEjsbTTLyPxCIpyk-rpHFdJKialib0Cd44YIu1Q","name":"Zerp357","profileIconId":3582,"revisionDate":1554029745000,"summonerLevel":47}'
+    http_version:
+  recorded_at: Thu, 22 Aug 2019 16:29:01 GMT
+- request:
+    method: get
+    uri: https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Riot-Token:
+      - RIOT_API_KEY
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 22 Aug 2019  16:29:01 GMT
+      Vary:
+      - Accept-Encoding
+      X-App-Rate-Limit:
+      - 500:10,30000:600
+      X-App-Rate-Limit-Count:
+      - 18:10,140:600
+      X-Method-Rate-Limit:
+      - 20000:10,1200000:600
+      X-Method-Rate-Limit-Count:
+      - 5:10,39:600
+      X-Riot-Edge-Trace-Id:
+      - d10a8c2e-35b0-46c0-8459-23c1c366d3a2
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '[{"championId":161,"championLevel":5,"championPoints":69169,"lastPlayTime":1524029826000,"championPointsSinceLastLevel":47569,"championPointsUntilNextLevel":0,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":101,"championLevel":4,"championPoints":16886,"lastPlayTime":1447632630000,"championPointsSinceLastLevel":4286,"championPointsUntilNextLevel":4714,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":82,"championLevel":3,"championPoints":12466,"lastPlayTime":1546272367000,"championPointsSinceLastLevel":6466,"championPointsUntilNextLevel":134,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":202,"championLevel":3,"championPoints":9833,"lastPlayTime":1455332547000,"championPointsSinceLastLevel":3833,"championPointsUntilNextLevel":2767,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":25,"championLevel":3,"championPoints":8443,"lastPlayTime":1447106326000,"championPointsSinceLastLevel":2443,"championPointsUntilNextLevel":4157,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":117,"championLevel":3,"championPoints":7405,"lastPlayTime":1447740010000,"championPointsSinceLastLevel":1405,"championPointsUntilNextLevel":5195,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":64,"championLevel":3,"championPoints":6548,"lastPlayTime":1546466834000,"championPointsSinceLastLevel":548,"championPointsUntilNextLevel":6052,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":53,"championLevel":3,"championPoints":6454,"lastPlayTime":1444689556000,"championPointsSinceLastLevel":454,"championPointsUntilNextLevel":6146,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":222,"championLevel":2,"championPoints":5851,"lastPlayTime":1453447822000,"championPointsSinceLastLevel":4051,"championPointsUntilNextLevel":149,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":157,"championLevel":2,"championPoints":5827,"lastPlayTime":1447217989000,"championPointsSinceLastLevel":4027,"championPointsUntilNextLevel":173,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":51,"championLevel":2,"championPoints":5454,"lastPlayTime":1448338457000,"championPointsSinceLastLevel":3654,"championPointsUntilNextLevel":546,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":145,"championLevel":2,"championPoints":5348,"lastPlayTime":1546279928000,"championPointsSinceLastLevel":3548,"championPointsUntilNextLevel":652,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":96,"championLevel":2,"championPoints":5036,"lastPlayTime":1443666840000,"championPointsSinceLastLevel":3236,"championPointsUntilNextLevel":964,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":105,"championLevel":2,"championPoints":4942,"lastPlayTime":1433370769000,"championPointsSinceLastLevel":3142,"championPointsUntilNextLevel":1058,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":12,"championLevel":2,"championPoints":4758,"lastPlayTime":1453957090000,"championPointsSinceLastLevel":2958,"championPointsUntilNextLevel":1242,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":238,"championLevel":2,"championPoints":4723,"lastPlayTime":1447225377000,"championPointsSinceLastLevel":2923,"championPointsUntilNextLevel":1277,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":104,"championLevel":2,"championPoints":4282,"lastPlayTime":1453954825000,"championPointsSinceLastLevel":2482,"championPointsUntilNextLevel":1718,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":555,"championLevel":2,"championPoints":3907,"lastPlayTime":1546445430000,"championPointsSinceLastLevel":2107,"championPointsUntilNextLevel":2093,"chestGranted":true,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":6,"championLevel":2,"championPoints":3899,"lastPlayTime":1546192320000,"championPointsSinceLastLevel":2099,"championPointsUntilNextLevel":2101,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":107,"championLevel":2,"championPoints":3587,"lastPlayTime":1432700876000,"championPointsSinceLastLevel":1787,"championPointsUntilNextLevel":2413,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":60,"championLevel":2,"championPoints":3368,"lastPlayTime":1440106280000,"championPointsSinceLastLevel":1568,"championPointsUntilNextLevel":2632,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":30,"championLevel":2,"championPoints":3304,"lastPlayTime":1546684818000,"championPointsSinceLastLevel":1504,"championPointsUntilNextLevel":2696,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":76,"championLevel":2,"championPoints":3248,"lastPlayTime":1547257888000,"championPointsSinceLastLevel":1448,"championPointsUntilNextLevel":2752,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":120,"championLevel":2,"championPoints":3106,"lastPlayTime":1445984325000,"championPointsSinceLastLevel":1306,"championPointsUntilNextLevel":2894,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":75,"championLevel":2,"championPoints":3006,"lastPlayTime":1546917368000,"championPointsSinceLastLevel":1206,"championPointsUntilNextLevel":2994,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":89,"championLevel":2,"championPoints":2982,"lastPlayTime":1453444154000,"championPointsSinceLastLevel":1182,"championPointsUntilNextLevel":3018,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":68,"championLevel":2,"championPoints":2975,"lastPlayTime":1442461687000,"championPointsSinceLastLevel":1175,"championPointsUntilNextLevel":3025,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":122,"championLevel":2,"championPoints":2853,"lastPlayTime":1444690991000,"championPointsSinceLastLevel":1053,"championPointsUntilNextLevel":3147,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":245,"championLevel":2,"championPoints":2563,"lastPlayTime":1434152933000,"championPointsSinceLastLevel":763,"championPointsUntilNextLevel":3437,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":92,"championLevel":2,"championPoints":2536,"lastPlayTime":1546979634000,"championPointsSinceLastLevel":736,"championPointsUntilNextLevel":3464,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":63,"championLevel":2,"championPoints":2382,"lastPlayTime":1447634194000,"championPointsSinceLastLevel":582,"championPointsUntilNextLevel":3618,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":33,"championLevel":2,"championPoints":2295,"lastPlayTime":1546726269000,"championPointsSinceLastLevel":495,"championPointsUntilNextLevel":3705,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":103,"championLevel":2,"championPoints":2264,"lastPlayTime":1447223109000,"championPointsSinceLastLevel":464,"championPointsUntilNextLevel":3736,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":11,"championLevel":2,"championPoints":2189,"lastPlayTime":1546449145000,"championPointsSinceLastLevel":389,"championPointsUntilNextLevel":3811,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":81,"championLevel":2,"championPoints":1826,"lastPlayTime":1546184912000,"championPointsSinceLastLevel":26,"championPointsUntilNextLevel":4174,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":72,"championLevel":1,"championPoints":1727,"lastPlayTime":1524027979000,"championPointsSinceLastLevel":1727,"championPointsUntilNextLevel":73,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":29,"championLevel":1,"championPoints":1715,"lastPlayTime":1546737723000,"championPointsSinceLastLevel":1715,"championPointsUntilNextLevel":85,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":13,"championLevel":1,"championPoints":1613,"lastPlayTime":1435103165000,"championPointsSinceLastLevel":1613,"championPointsUntilNextLevel":187,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":43,"championLevel":1,"championPoints":1479,"lastPlayTime":1435360600000,"championPointsSinceLastLevel":1479,"championPointsUntilNextLevel":321,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":84,"championLevel":1,"championPoints":1422,"lastPlayTime":1546899049000,"championPointsSinceLastLevel":1422,"championPointsUntilNextLevel":378,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":45,"championLevel":1,"championPoints":1421,"lastPlayTime":1546750794000,"championPointsSinceLastLevel":1421,"championPointsUntilNextLevel":379,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":7,"championLevel":1,"championPoints":1404,"lastPlayTime":1432615100000,"championPointsSinceLastLevel":1404,"championPointsUntilNextLevel":396,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":31,"championLevel":1,"championPoints":1388,"lastPlayTime":1548116797000,"championPointsSinceLastLevel":1388,"championPointsUntilNextLevel":412,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":14,"championLevel":1,"championPoints":1325,"lastPlayTime":1546671964000,"championPointsSinceLastLevel":1325,"championPointsUntilNextLevel":475,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":35,"championLevel":1,"championPoints":1310,"lastPlayTime":1546454589000,"championPointsSinceLastLevel":1310,"championPointsUntilNextLevel":490,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":80,"championLevel":1,"championPoints":1308,"lastPlayTime":1546733508000,"championPointsSinceLastLevel":1308,"championPointsUntilNextLevel":492,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":106,"championLevel":1,"championPoints":1255,"lastPlayTime":1546728939000,"championPointsSinceLastLevel":1255,"championPointsUntilNextLevel":545,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":121,"championLevel":1,"championPoints":1251,"lastPlayTime":1447228328000,"championPointsSinceLastLevel":1251,"championPointsUntilNextLevel":549,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":17,"championLevel":1,"championPoints":1241,"lastPlayTime":1546907278000,"championPointsSinceLastLevel":1241,"championPointsUntilNextLevel":559,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":134,"championLevel":1,"championPoints":1241,"lastPlayTime":1546759352000,"championPointsSinceLastLevel":1241,"championPointsUntilNextLevel":559,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":99,"championLevel":1,"championPoints":1189,"lastPlayTime":1443664300000,"championPointsSinceLastLevel":1189,"championPointsUntilNextLevel":611,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":266,"championLevel":1,"championPoints":1169,"lastPlayTime":1546741569000,"championPointsSinceLastLevel":1169,"championPointsUntilNextLevel":631,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":24,"championLevel":1,"championPoints":1114,"lastPlayTime":1546701403000,"championPointsSinceLastLevel":1114,"championPointsUntilNextLevel":686,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":268,"championLevel":1,"championPoints":1100,"lastPlayTime":1443662023000,"championPointsSinceLastLevel":1100,"championPointsUntilNextLevel":700,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":61,"championLevel":1,"championPoints":1038,"lastPlayTime":1432767074000,"championPointsSinceLastLevel":1038,"championPointsUntilNextLevel":762,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":5,"championLevel":1,"championPoints":1009,"lastPlayTime":1546669574000,"championPointsSinceLastLevel":1009,"championPointsUntilNextLevel":791,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":19,"championLevel":1,"championPoints":1002,"lastPlayTime":1546190024000,"championPointsSinceLastLevel":1002,"championPointsUntilNextLevel":798,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":126,"championLevel":1,"championPoints":1002,"lastPlayTime":1432765581000,"championPointsSinceLastLevel":1002,"championPointsUntilNextLevel":798,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":39,"championLevel":1,"championPoints":999,"lastPlayTime":1435024065000,"championPointsSinceLastLevel":999,"championPointsUntilNextLevel":801,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":32,"championLevel":1,"championPoints":974,"lastPlayTime":1473131810000,"championPointsSinceLastLevel":974,"championPointsUntilNextLevel":826,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":36,"championLevel":1,"championPoints":902,"lastPlayTime":1546743424000,"championPointsSinceLastLevel":902,"championPointsUntilNextLevel":898,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":23,"championLevel":1,"championPoints":842,"lastPlayTime":1546551263000,"championPointsSinceLastLevel":842,"championPointsUntilNextLevel":958,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":98,"championLevel":1,"championPoints":707,"lastPlayTime":1553965737000,"championPointsSinceLastLevel":707,"championPointsUntilNextLevel":1093,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":85,"championLevel":1,"championPoints":685,"lastPlayTime":1547319270000,"championPointsSinceLastLevel":685,"championPointsUntilNextLevel":1115,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":3,"championLevel":1,"championPoints":680,"lastPlayTime":1547494587000,"championPointsSinceLastLevel":680,"championPointsUntilNextLevel":1120,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":518,"championLevel":1,"championPoints":594,"lastPlayTime":1547491107000,"championPointsSinceLastLevel":594,"championPointsUntilNextLevel":1206,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":86,"championLevel":1,"championPoints":515,"lastPlayTime":1546756063000,"championPointsSinceLastLevel":515,"championPointsUntilNextLevel":1285,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":1,"championLevel":1,"championPoints":420,"lastPlayTime":1445903048000,"championPointsSinceLastLevel":420,"championPointsUntilNextLevel":1380,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":254,"championLevel":1,"championPoints":391,"lastPlayTime":1447736416000,"championPointsSinceLastLevel":391,"championPointsUntilNextLevel":1409,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":38,"championLevel":1,"championPoints":377,"lastPlayTime":1446160512000,"championPointsSinceLastLevel":377,"championPointsUntilNextLevel":1423,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":150,"championLevel":1,"championPoints":254,"lastPlayTime":1440112501000,"championPointsSinceLastLevel":254,"championPointsUntilNextLevel":1546,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":18,"championLevel":1,"championPoints":210,"lastPlayTime":1547268275000,"championPointsSinceLastLevel":210,"championPointsUntilNextLevel":1590,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":54,"championLevel":1,"championPoints":194,"lastPlayTime":1546914866000,"championPointsSinceLastLevel":194,"championPointsUntilNextLevel":1606,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":77,"championLevel":1,"championPoints":186,"lastPlayTime":1546793247000,"championPointsSinceLastLevel":186,"championPointsUntilNextLevel":1614,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":55,"championLevel":1,"championPoints":168,"lastPlayTime":1547065103000,"championPointsSinceLastLevel":168,"championPointsUntilNextLevel":1632,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":22,"championLevel":1,"championPoints":135,"lastPlayTime":1547847686000,"championPointsSinceLastLevel":135,"championPointsUntilNextLevel":1665,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":421,"championLevel":1,"championPoints":105,"lastPlayTime":1553968681000,"championPointsSinceLastLevel":105,"championPointsUntilNextLevel":1695,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"},{"championId":110,"championLevel":1,"championPoints":98,"lastPlayTime":1546806352000,"championPointsSinceLastLevel":98,"championPointsUntilNextLevel":1702,"chestGranted":false,"tokensEarned":0,"summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ"}]'
+    http_version:
+  recorded_at: Thu, 22 Aug 2019 16:29:01 GMT
+- request:
+    method: get
+    uri: https://euw1.api.riotgames.com/lol/match/v4/matchlists/by-account/85MUAYUUItGbK5tir4zBajFXUJ12WDlD0GuVF63oYtHbRg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Riot-Token:
+      - RIOT_API_KEY
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,Region,Cookie
+      Access-Control-Allow-Methods:
+      - GET,POST,OPTIONS
+      Cf-Ray:
+      - 50a639274cbba735-DUB
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 22 Aug 2019 16:29:02 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-App-Rate-Limit:
+      - 500:10,30000:600
+      X-App-Rate-Limit-Count:
+      - 19:10,141:600
+      X-Method-Rate-Limit:
+      - '1000:10'
+      X-Method-Rate-Limit-Count:
+      - '4:10'
+      X-Riot-Edge-Trace-Id:
+      - d027d755-182b-4311-bb4a-b0eeeda01e4f
+      Content-Length:
+      - '13809'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"matches":[{"platformId":"EUW1","gameId":3980341573,"champion":202,"queue":420,"season":13,"timestamp":1554027691049,"role":"DUO_CARRY","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3979943842,"champion":202,"queue":420,"season":13,"timestamp":1553979737364,"role":"DUO_CARRY","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3979707974,"champion":421,"queue":900,"season":13,"timestamp":1553967539192,"role":"DUO_SUPPORT","lane":"NONE"},{"platformId":"EUW1","gameId":3979692014,"champion":107,"queue":900,"season":13,"timestamp":1553965890497,"role":"NONE","lane":"JUNGLE"},{"platformId":"EUW1","gameId":3979636696,"champion":98,"queue":900,"season":13,"timestamp":1553964446062,"role":"NONE","lane":"JUNGLE"},{"platformId":"EUW1","gameId":3979623811,"champion":238,"queue":900,"season":13,"timestamp":1553963628645,"role":"DUO","lane":"NONE"},{"platformId":"EUW1","gameId":3979573923,"champion":202,"queue":420,"season":13,"timestamp":1553961002696,"role":"DUO_CARRY","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3979545815,"champion":202,"queue":420,"season":13,"timestamp":1553958888154,"role":"DUO_CARRY","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3979414056,"champion":202,"queue":420,"season":13,"timestamp":1553949691150,"role":"DUO_CARRY","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3979344511,"champion":202,"queue":420,"season":13,"timestamp":1553946369657,"role":"DUO_CARRY","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3978542397,"champion":202,"queue":420,"season":13,"timestamp":1553893743713,"role":"DUO_CARRY","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3961235399,"champion":555,"queue":420,"season":13,"timestamp":1552489319520,"role":"SOLO","lane":"TOP"},{"platformId":"EUW1","gameId":3905487072,"champion":145,"queue":420,"season":13,"timestamp":1548450044432,"role":"DUO_CARRY","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3904858573,"champion":63,"queue":420,"season":13,"timestamp":1548424247270,"role":"SOLO","lane":"MID"},{"platformId":"EUW1","gameId":3901812727,"champion":14,"queue":420,"season":12,"timestamp":1548179996863,"role":"SOLO","lane":"TOP"},{"platformId":"EUW1","gameId":3901409873,"champion":122,"queue":420,"season":12,"timestamp":1548122745448,"role":"SOLO","lane":"TOP"},{"platformId":"EUW1","gameId":3901427777,"champion":92,"queue":420,"season":12,"timestamp":1548120411268,"role":"SOLO","lane":"TOP"},{"platformId":"EUW1","gameId":3901425069,"champion":80,"queue":420,"season":12,"timestamp":1548117643062,"role":"NONE","lane":"JUNGLE"},{"platformId":"EUW1","gameId":3901433082,"champion":64,"queue":420,"season":12,"timestamp":1548117143413,"role":"DUO","lane":"NONE"},{"platformId":"EUW1","gameId":3901388500,"champion":31,"queue":420,"season":12,"timestamp":1548114070140,"role":"SOLO","lane":"TOP"},{"platformId":"EUW1","gameId":3901365363,"champion":6,"queue":420,"season":12,"timestamp":1548111705954,"role":"DUO_SUPPORT","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3901320227,"champion":85,"queue":1200,"season":12,"timestamp":1548109598095,"role":"DUO_SUPPORT","lane":"NONE"},{"platformId":"EUW1","gameId":3901187239,"champion":238,"queue":440,"season":12,"timestamp":1548100811759,"role":"SOLO","lane":"MID"},{"platformId":"EUW1","gameId":3901097091,"champion":105,"queue":420,"season":12,"timestamp":1548097687025,"role":"DUO","lane":"MID"},{"platformId":"EUW1","gameId":3901068608,"champion":145,"queue":420,"season":12,"timestamp":1548095329077,"role":"DUO_CARRY","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3901039213,"champion":202,"queue":420,"season":12,"timestamp":1548092908399,"role":"DUO_CARRY","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3901012730,"champion":29,"queue":420,"season":12,"timestamp":1548090420360,"role":"NONE","lane":"JUNGLE"},{"platformId":"EUW1","gameId":3900963682,"champion":82,"queue":420,"season":12,"timestamp":1548087303105,"role":"SOLO","lane":"TOP"},{"platformId":"EUW1","gameId":3900935521,"champion":120,"queue":420,"season":12,"timestamp":1548084681873,"role":"NONE","lane":"JUNGLE"},{"platformId":"EUW1","gameId":3900911076,"champion":89,"queue":420,"season":12,"timestamp":1548082358966,"role":"DUO_SUPPORT","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3900884979,"champion":13,"queue":400,"season":12,"timestamp":1548080068549,"role":"SOLO","lane":"MID"},{"platformId":"EUW1","gameId":3900823090,"champion":53,"queue":420,"season":12,"timestamp":1548072184404,"role":"DUO_SUPPORT","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3900778650,"champion":13,"queue":400,"season":12,"timestamp":1548068650876,"role":"SOLO","lane":"TOP"},{"platformId":"EUW1","gameId":3900464334,"champion":11,"queue":420,"season":12,"timestamp":1548017069697,"role":"DUO_SUPPORT","lane":"TOP"},{"platformId":"EUW1","gameId":3900375156,"champion":202,"queue":420,"season":12,"timestamp":1548014823294,"role":"DUO_CARRY","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3900121113,"champion":61,"queue":420,"season":12,"timestamp":1548009010741,"role":"SOLO","lane":"MID"},{"platformId":"EUW1","gameId":3899974119,"champion":30,"queue":420,"season":12,"timestamp":1548006806353,"role":"NONE","lane":"JUNGLE"},{"platformId":"EUW1","gameId":3899825628,"champion":6,"queue":420,"season":12,"timestamp":1548001681015,"role":"SOLO","lane":"TOP"},{"platformId":"EUW1","gameId":3899782828,"champion":51,"queue":420,"season":12,"timestamp":1547998388330,"role":"DUO","lane":"MID"},{"platformId":"EUW1","gameId":3899731160,"champion":11,"queue":420,"season":12,"timestamp":1547995242120,"role":"NONE","lane":"JUNGLE"},{"platformId":"EUW1","gameId":3899698972,"champion":64,"queue":420,"season":12,"timestamp":1547994667966,"role":"DUO","lane":"NONE"},{"platformId":"EUW1","gameId":3899439800,"champion":60,"queue":420,"season":12,"timestamp":1547965952700,"role":"NONE","lane":"JUNGLE"},{"platformId":"EUW1","gameId":3899429548,"champion":30,"queue":420,"season":12,"timestamp":1547963111208,"role":"NONE","lane":"JUNGLE"},{"platformId":"EUW1","gameId":3899428951,"champion":30,"queue":420,"season":12,"timestamp":1547961012590,"role":"NONE","lane":"JUNGLE"},{"platformId":"EUW1","gameId":3898986147,"champion":25,"queue":420,"season":12,"timestamp":1547919902345,"role":"DUO_SUPPORT","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3898940393,"champion":82,"queue":440,"season":12,"timestamp":1547918075380,"role":"SOLO","lane":"TOP"},{"platformId":"EUW1","gameId":3898931909,"champion":3,"queue":440,"season":12,"timestamp":1547915397530,"role":"SOLO","lane":"MID"},{"platformId":"EUW1","gameId":3898904095,"champion":555,"queue":440,"season":12,"timestamp":1547913120443,"role":"DUO_SUPPORT","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3898850927,"champion":53,"queue":400,"season":12,"timestamp":1547909022848,"role":"DUO_SUPPORT","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3898699604,"champion":7,"queue":450,"season":12,"timestamp":1547901382494,"role":"DUO_SUPPORT","lane":"NONE"},{"platformId":"EUW1","gameId":3898695843,"champion":105,"queue":1200,"season":12,"timestamp":1547899818176,"role":"DUO_SUPPORT","lane":"NONE"},{"platformId":"EUW1","gameId":3898672740,"champion":89,"queue":400,"season":12,"timestamp":1547897928608,"role":"DUO_SUPPORT","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3898628706,"champion":12,"queue":400,"season":12,"timestamp":1547895895144,"role":"DUO_SUPPORT","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3898643200,"champion":89,"queue":420,"season":12,"timestamp":1547893487025,"role":"DUO_SUPPORT","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3898373208,"champion":122,"queue":420,"season":12,"timestamp":1547848556284,"role":"DUO","lane":"NONE"},{"platformId":"EUW1","gameId":3898254923,"champion":22,"queue":400,"season":12,"timestamp":1547846274505,"role":"DUO_SUPPORT","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3898077842,"champion":53,"queue":440,"season":12,"timestamp":1547844307597,"role":"DUO_SUPPORT","lane":"MID"},{"platformId":"EUW1","gameId":3897777652,"champion":53,"queue":420,"season":12,"timestamp":1547835168241,"role":"DUO_SUPPORT","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3897739459,"champion":85,"queue":420,"season":12,"timestamp":1547832195022,"role":"SOLO","lane":"TOP"},{"platformId":"EUW1","gameId":3897669815,"champion":555,"queue":440,"season":12,"timestamp":1547828374536,"role":"DUO_SUPPORT","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3897681866,"champion":53,"queue":440,"season":12,"timestamp":1547825752807,"role":"DUO_SUPPORT","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3896417166,"champion":85,"queue":420,"season":12,"timestamp":1547664671798,"role":"SOLO","lane":"TOP"},{"platformId":"EUW1","gameId":3895657263,"champion":75,"queue":420,"season":12,"timestamp":1547602318141,"role":"SOLO","lane":"TOP"},{"platformId":"EUW1","gameId":3895674361,"champion":157,"queue":420,"season":12,"timestamp":1547600323995,"role":"DUO","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3895671712,"champion":38,"queue":420,"season":12,"timestamp":1547598066930,"role":"SOLO","lane":"MID"},{"platformId":"EUW1","gameId":3895608664,"champion":63,"queue":420,"season":12,"timestamp":1547595349520,"role":"DUO_SUPPORT","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3895594147,"champion":3,"queue":420,"season":12,"timestamp":1547592697817,"role":"SOLO","lane":"MID"},{"platformId":"EUW1","gameId":3895558602,"champion":157,"queue":420,"season":12,"timestamp":1547590803643,"role":"DUO_CARRY","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3895447119,"champion":29,"queue":420,"season":12,"timestamp":1547584119529,"role":"NONE","lane":"JUNGLE"},{"platformId":"EUW1","gameId":3895418218,"champion":76,"queue":420,"season":12,"timestamp":1547581954822,"role":"DUO_SUPPORT","lane":"TOP"},{"platformId":"EUW1","gameId":3895368629,"champion":60,"queue":420,"season":12,"timestamp":1547579254623,"role":"NONE","lane":"JUNGLE"},{"platformId":"EUW1","gameId":3894933971,"champion":60,"queue":420,"season":12,"timestamp":1547512453295,"role":"NONE","lane":"JUNGLE"},{"platformId":"EUW1","gameId":3894889437,"champion":76,"queue":420,"season":12,"timestamp":1547509264245,"role":"NONE","lane":"JUNGLE"},{"platformId":"EUW1","gameId":3894904672,"champion":82,"queue":420,"season":12,"timestamp":1547507128099,"role":"SOLO","lane":"TOP"},{"platformId":"EUW1","gameId":3894686032,"champion":238,"queue":420,"season":12,"timestamp":1547495205824,"role":"SOLO","lane":"MID"},{"platformId":"EUW1","gameId":3894661824,"champion":3,"queue":420,"season":12,"timestamp":1547491554343,"role":"SOLO","lane":"MID"},{"platformId":"EUW1","gameId":3894587910,"champion":518,"queue":450,"season":12,"timestamp":1547489982557,"role":"DUO_SUPPORT","lane":"NONE"},{"platformId":"EUW1","gameId":3894621991,"champion":266,"queue":450,"season":12,"timestamp":1547488744037,"role":"DUO_SUPPORT","lane":"NONE"},{"platformId":"EUW1","gameId":3894576509,"champion":14,"queue":450,"season":12,"timestamp":1547486978518,"role":"DUO","lane":"TOP"},{"platformId":"EUW1","gameId":3894560996,"champion":161,"queue":420,"season":12,"timestamp":1547484966972,"role":"SOLO","lane":"MID"},{"platformId":"EUW1","gameId":3894522308,"champion":157,"queue":420,"season":12,"timestamp":1547482125738,"role":"SOLO","lane":"MID"},{"platformId":"EUW1","gameId":3894446285,"champion":76,"queue":420,"season":12,"timestamp":1547479121476,"role":"NONE","lane":"JUNGLE"},{"platformId":"EUW1","gameId":3894444951,"champion":35,"queue":420,"season":12,"timestamp":1547478528660,"role":"DUO","lane":"NONE"},{"platformId":"EUW1","gameId":3894431845,"champion":30,"queue":1200,"season":12,"timestamp":1547476860146,"role":"DUO_SUPPORT","lane":"NONE"},{"platformId":"EUW1","gameId":3894366798,"champion":75,"queue":420,"season":12,"timestamp":1547468705829,"role":"NONE","lane":"JUNGLE"},{"platformId":"EUW1","gameId":3894354767,"champion":75,"queue":420,"season":12,"timestamp":1547466916418,"role":"SOLO","lane":"TOP"},{"platformId":"EUW1","gameId":3894340829,"champion":81,"queue":420,"season":12,"timestamp":1547463422798,"role":"DUO_CARRY","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3894090337,"champion":53,"queue":420,"season":12,"timestamp":1547416232068,"role":"SOLO","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3894078570,"champion":76,"queue":420,"season":12,"timestamp":1547413359645,"role":"NONE","lane":"JUNGLE"},{"platformId":"EUW1","gameId":3894041545,"champion":76,"queue":420,"season":12,"timestamp":1547411086571,"role":"NONE","lane":"JUNGLE"},{"platformId":"EUW1","gameId":3893870613,"champion":82,"queue":420,"season":12,"timestamp":1547403443408,"role":"NONE","lane":"JUNGLE"},{"platformId":"EUW1","gameId":3893532984,"champion":75,"queue":440,"season":12,"timestamp":1547400942060,"role":"NONE","lane":"JUNGLE"},{"platformId":"EUW1","gameId":3893472046,"champion":145,"queue":420,"season":12,"timestamp":1547398502693,"role":"DUO_CARRY","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3893385392,"champion":202,"queue":420,"season":12,"timestamp":1547396290961,"role":"DUO_CARRY","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3893354366,"champion":75,"queue":420,"season":12,"timestamp":1547393771195,"role":"NONE","lane":"JUNGLE"},{"platformId":"EUW1","gameId":3892581210,"champion":85,"queue":420,"season":12,"timestamp":1547317319617,"role":"DUO_CARRY","lane":"BOTTOM"},{"platformId":"EUW1","gameId":3892552968,"champion":105,"queue":420,"season":12,"timestamp":1547315206056,"role":"SOLO","lane":"MID"},{"platformId":"EUW1","gameId":3892465859,"champion":64,"queue":420,"season":12,"timestamp":1547312503103,"role":"NONE","lane":"JUNGLE"},{"platformId":"EUW1","gameId":3892449403,"champion":72,"queue":420,"season":12,"timestamp":1547310809530,"role":"NONE","lane":"JUNGLE"},{"platformId":"EUW1","gameId":3892450922,"champion":33,"queue":420,"season":12,"timestamp":1547308620457,"role":"NONE","lane":"JUNGLE"}],"startIndex":0,"endIndex":100,"totalGames":184}'
+    http_version:
+  recorded_at: Thu, 22 Aug 2019 16:29:02 GMT
+- request:
+    method: get
+    uri: https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Riot-Token:
+      - RIOT_API_KEY
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - public, max-age=3600
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 22 Aug 2019  16:29:02 GMT
+      Vary:
+      - Accept-Encoding
+      X-App-Rate-Limit:
+      - 500:10,30000:600
+      X-App-Rate-Limit-Count:
+      - 20:10,142:600
+      X-Method-Rate-Limit:
+      - 300:60
+      X-Method-Rate-Limit-Count:
+      - 21:60
+      X-Riot-Edge-Trace-Id:
+      - e4fcfe9d-5240-4cbc-992e-e98ca8792f00
+      Content-Length:
+      - '306'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '[{"leagueId":"87661e00-5301-11e9-bf34-c81f66dacb22","queueType":"RANKED_SOLO_5x5","tier":"BRONZE","rank":"IV","summonerId":"qpvKRr7b2sN2yyZ7DgG6HLx7RJb2daQpt1UA28eNzopjJCQ","summonerName":"Zerp357","leaguePoints":6,"wins":4,"losses":6,"veteran":false,"inactive":false,"freshBlood":false,"hotStreak":false}]'
+    http_version:
+  recorded_at: Thu, 22 Aug 2019 16:29:02 GMT
+recorded_with: VCR 4.0.0

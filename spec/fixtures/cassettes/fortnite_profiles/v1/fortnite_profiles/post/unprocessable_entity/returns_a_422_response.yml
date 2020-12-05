@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.scoutsdk.com/graph
+    body:
+      encoding: UTF-8
+      string: '{"query":"      {        players(identifier: \"\", title: \"fortnite\")
+        {          results {            player {              playerId            }            persona
+        {              handle              platform {                slug              }              pictureUrl            }          }        }      }","variables":{}}'
+    headers:
+      Accept:
+      - application/com.scoutsdk.graph+json; version=1.1.0; charset=utf8
+      Content-Type:
+      - application/json
+      Scout-App:
+      - FORTNITE_API_KEY
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 22 Aug 2019 16:28:06 GMT
+      Content-Type:
+      - text/plain; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dd1522b73f5f180dce6aad001359594581566491286; expires=Fri, 21-Aug-20
+        16:28:06 GMT; path=/; domain=.scoutsdk.com; HttpOnly
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 50a637cb68ebcd93-CDG
+    body:
+      encoding: UTF-8
+      string: '{"data":{"players":{"results":[{"player":{"playerId":"AQUAAgGrJEVFl94OSo4lLBujHghk"},"persona":{"handle":"RealYngSavage","platform":{"slug":"psn"},"pictureUrl":"https://static-resource.np.community.playstation.net/avatar/SCEI/I0034.png"}},{"player":{"playerId":"AQUACAF8eJfIOIAaR4d05EaILb7f"},"persona":{"handle":"Hunterreed379","platform":{"slug":"epic"},"pictureUrl":null}},{"player":{"playerId":"AQUAAgGn96mEwKxzS4gVuUVHuC1S"},"persona":{"handle":"kjetilz1965","platform":{"slug":"psn"},"pictureUrl":"http://static-resource.np.community.playstation.net/avatar_xl/WWS_E/E0013_XL.png"}},{"player":{"playerId":"AQUACAHUBZytWLlmSr8PombHLlFJ"},"persona":{"handle":"Twitch
+        Wikdahl","platform":{"slug":"epic"},"pictureUrl":null}},{"player":{"playerId":"AQUACAGi3Ml7kQw/S40HZ5yrFTmp"},"persona":{"handle":"MystDLX","platform":{"slug":"epic"},"pictureUrl":null}},{"player":{"playerId":"AQUACAF9jdFFFNkFRJDAszH3GbVR"},"persona":{"handle":"terranblake","platform":{"slug":"epic"},"pictureUrl":null}},{"player":{"playerId":"AQUACAE+R2DppmoZTp1wslIQEcxI"},"persona":{"handle":"SteviellHD","platform":{"slug":"epic"},"pictureUrl":null}},{"player":{"playerId":"AQUAAgECZ51uHhFFTI79FkY3dwEZ"},"persona":{"handle":"beastmodejaz","platform":{"slug":"psn"},"pictureUrl":null}},{"player":{"playerId":"AQUAAgEZp8zTeT4WT5WXiI5hyZEq"},"persona":{"handle":"lemonlimesuprise","platform":{"slug":"psn"},"pictureUrl":"http://psn-rsc.prod.dl.playstation.net/psn-rsc/avatar/UP1112/CUSA06917_00-AV00000000000076_D0DB48B4F196AA009100_xl.png"}}]}}}'
+    http_version:
+  recorded_at: Thu, 22 Aug 2019 16:28:07 GMT
+recorded_with: VCR 4.0.0

@@ -1,0 +1,88 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.scoutsdk.com/graph
+    body:
+      encoding: UTF-8
+      string: '{"query":"      {        players(identifier: \"Teazie\", title: \"fortnite\")
+        {          results {            player {              playerId            }            persona
+        {              handle              platform {                slug              }              pictureUrl            }          }        }      }","variables":{}}'
+    headers:
+      Accept:
+      - application/com.scoutsdk.graph+json; version=1.1.0; charset=utf8
+      Content-Type:
+      - application/json
+      Scout-App:
+      - FORTNITE_API_KEY
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 22 Aug 2019 16:31:02 GMT
+      Content-Type:
+      - text/plain; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d74b1b6b1ac61ceccbd21b26dea53743e1566491461; expires=Fri, 21-Aug-20
+        16:31:01 GMT; path=/; domain=.scoutsdk.com; HttpOnly
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 50a63c0f7c50cd77-CDG
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJkYXRhIjp7InBsYXllcnMiOnsicmVzdWx0cyI6W3sicGxheWVyIjp7InBsYXllcklkIjoiQWdVQUNBV0NtcjNvK05odFNKQ005MFV3TUJwZiJ9LCJwZXJzb25hIjp7ImhhbmRsZSI6IlRlYXppZSIsInBsYXRmb3JtIjp7InNsdWciOiJlcGljIn0sInBpY3R1cmVVcmwiOm51bGx9fSx7InBsYXllciI6eyJwbGF5ZXJJZCI6IkFRVUFBUUVjbDZFUEwrMTVTYUhjVDRVbm9uOEUifSwicGVyc29uYSI6eyJoYW5kbGUiOiJUcmF3aWUiLCJwbGF0Zm9ybSI6eyJzbHVnIjoiZXBpYyJ9LCJwaWN0dXJlVXJsIjpudWxsfX0seyJwbGF5ZXIiOnsicGxheWVySWQiOiJBUVVBQ0FGSEtseS91YUhGUnIvalNsS25Hb25DIn0sInBlcnNvbmEiOnsiaGFuZGxlIjoiVGVlxLd6aWUiLCJwbGF0Zm9ybSI6eyJzbHVnIjoiZXBpYyJ9LCJwaWN0dXJlVXJsIjpudWxsfX0seyJwbGF5ZXIiOnsicGxheWVySWQiOiJBUVVBQ0FIWXJHZGpzcHl3VG9oa2JzRUJOaVZ0In0sInBlcnNvbmEiOnsiaGFuZGxlIjoiVGVhZmkiLCJwbGF0Zm9ybSI6eyJzbHVnIjoiZXBpYyJ9LCJwaWN0dXJlVXJsIjpudWxsfX0seyJwbGF5ZXIiOnsicGxheWVySWQiOiJBZ1VBQ0FTQ21yM28rTmh0U0pDTTkwVXdNQnBmIn0sInBlcnNvbmEiOnsiaGFuZGxlIjoiVGVhemllIiwicGxhdGZvcm0iOnsic2x1ZyI6ImVwaWMifSwicGljdHVyZVVybCI6bnVsbH19LHsicGxheWVyIjp7InBsYXllcklkIjoiQWdVQUNBV0NtcjNvK05odFNKQ005MFV3TUJwZiJ9LCJwZXJzb25hIjp7ImhhbmRsZSI6IlRlYXppZSIsInBsYXRmb3JtIjp7InNsdWciOiJlcGljIn0sInBpY3R1cmVVcmwiOm51bGx9fSx7InBsYXllciI6eyJwbGF5ZXJJZCI6IkFnVUFDQWFDbXIzbytOaHRTSkNNOTBVd01CcGYifSwicGVyc29uYSI6eyJoYW5kbGUiOiJUZWF6aWUiLCJwbGF0Zm9ybSI6eyJzbHVnIjoiZXBpYyJ9LCJwaWN0dXJlVXJsIjpudWxsfX1dfX19
+    http_version:
+  recorded_at: Thu, 22 Aug 2019 16:31:02 GMT
+- request:
+    method: post
+    uri: https://api.scoutsdk.com/graph
+    body:
+      encoding: UTF-8
+      string: '{"query":"      {        player(title: \"fortnite\", id: \"AgUACAWCmr3o+NhtSJCM90UwMBpf\",
+        segment: \"alltime\") {          segments {            metadata {              key              name              value              displayValue            }            stats
+        {              metadata {                key                name                isReversed              }              value              displayValue            }          }        }      }","variables":{}}'
+    headers:
+      Accept:
+      - application/com.scoutsdk.graph+json; version=1.1.0; charset=utf8
+      Content-Type:
+      - application/json
+      Scout-App:
+      - FORTNITE_API_KEY
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 22 Aug 2019 16:31:03 GMT
+      Content-Type:
+      - text/plain; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d6700345e2d01f13cc5a0cbcd35f666201566491462; expires=Fri, 21-Aug-20
+        16:31:02 GMT; path=/; domain=.scoutsdk.com; HttpOnly
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 50a63c17db2ccda3-CDG
+    body:
+      encoding: UTF-8
+      string: '{"data":{"player":{"segments":[]}}}'
+    http_version:
+  recorded_at: Thu, 22 Aug 2019 16:31:03 GMT
+recorded_with: VCR 4.0.0

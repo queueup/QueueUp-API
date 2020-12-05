@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Riot-Token:
+      - RIOT_API_KEY
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 22 Aug 2019  16:29:24 GMT
+      X-App-Rate-Limit:
+      - 500:10,30000:600
+      X-App-Rate-Limit-Count:
+      - 23:10,215:600
+      X-Method-Rate-Limit:
+      - 2000:60
+      X-Method-Rate-Limit-Count:
+      - 1:60
+      X-Riot-Edge-Trace-Id:
+      - af0fdcb5-b501-428d-935a-642a2f6a8f61
+      Content-Length:
+      - '85'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"status":{"message":"Bad Request - Exception decrypting by-name","status_code":400}}'
+    http_version:
+  recorded_at: Thu, 22 Aug 2019 16:29:24 GMT
+- request:
+    method: get
+    uri: https://euw1.api.riotgames.com/lol/match/v4/matchlists/by-account/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Riot-Token:
+      - RIOT_API_KEY
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 22 Aug 2019  16:29:24 GMT
+      X-App-Rate-Limit:
+      - 500:10,30000:600
+      X-App-Rate-Limit-Count:
+      - 1:10,18:600
+      X-Riot-Edge-Trace-Id:
+      - 55fbe2d8-fd9c-4964-960d-025e3770eb95
+      Content-Length:
+      - '52'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"status":{"message":"Forbidden","status_code":403}}'
+    http_version:
+  recorded_at: Thu, 22 Aug 2019 16:29:24 GMT
+recorded_with: VCR 4.0.0

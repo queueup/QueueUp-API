@@ -1,0 +1,6 @@
+test:
+  adapter: postgresql
+  database: queueup_test
+  host: postgres
+  password:
+  username: postgres

@@ -1,0 +1,50 @@
+image: ruby:2.5.1
+
+services:
+  - postgres:latest
+
+variables:
+  POSTGRES_DB: queueup_test
+  POSTGRES_USER: postgres
+  POSTGRES_PASSWORD: ''
+
+before_script:
+  - bundle install
+
+stages:
+  - test
+  - deploy
+
+rspec:
+  before_script:
+    - cp .gitlab/ci/database.yml config/database.yml
+    - bundle install
+    - RAILS_ENV=test bundle exec rails db:create db:schema:load
+  script:
+    - RAILS_ENV=test bundle exec rspec
+  stage: test
+
+rubocop:
+  script:
+    - RAILS_ENV=test bundle exec rubocop
+  stage: test
+
+deploy-staging:
+  only:
+    - develop
+  script:
+    - which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )
+    - eval $(ssh-agent -s)
+    - ssh-add <(echo -e "$SSH_PRIVATE_KEY")
+    - cap staging deploy
+  stage: deploy
+
+deploy-production:
+  only:
+    - master
+  script:
+    - which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )
+    - eval $(ssh-agent -s)
+    - ssh-add <(echo -e "$SSH_PRIVATE_KEY")
+    - cap production deploy
+  stage: deploy

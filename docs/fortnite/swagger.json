@@ -1,0 +1,39 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Fortnite API",
+    "version": "v1"
+  },
+  "paths": {
+    "/fortnite/assets/avatars": {
+      "get": {
+        "summary": "Getting avatars",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Getting Avatars",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "base_path": {
+                  "type": "string"
+                },
+                "avatars": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

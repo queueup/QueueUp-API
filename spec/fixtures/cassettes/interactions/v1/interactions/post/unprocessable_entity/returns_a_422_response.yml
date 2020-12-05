@@ -1,0 +1,173 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/Andoslash
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Riot-Token:
+      - RIOT_API_KEY
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 22 Aug 2019  16:29:22 GMT
+      Vary:
+      - Accept-Encoding
+      X-App-Rate-Limit:
+      - 500:10,30000:600
+      X-App-Rate-Limit-Count:
+      - 15:10,207:600
+      X-Method-Rate-Limit:
+      - 2000:60
+      X-Method-Rate-Limit-Count:
+      - 39:60
+      X-Riot-Edge-Trace-Id:
+      - 8b19d623-6800-4688-a74e-bb165a75e352
+      Content-Length:
+      - '292'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"KAlpQjRnwhQJ_eXZ0QxOEMEX-qK5_v7_TgZWJaHH1i-mG0g","accountId":"527N1B3AiYQ_Ud_WPcs0SXfT0_xzrtLXM2xjISJXwnee-Q","puuid":"Ydd-Jx3QiFOw8t8-mkVGTA70KrfVqIuKtWQiz6_T6zmGhgGwwDj1ir6W6l7C1m1G1UIJA3bWUBqpGA","name":"Andoslash","profileIconId":11,"revisionDate":1495767147000,"summonerLevel":15}'
+    http_version:
+  recorded_at: Thu, 22 Aug 2019 16:29:22 GMT
+- request:
+    method: get
+    uri: https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/KAlpQjRnwhQJ_eXZ0QxOEMEX-qK5_v7_TgZWJaHH1i-mG0g
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Riot-Token:
+      - RIOT_API_KEY
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 22 Aug 2019  16:29:22 GMT
+      Vary:
+      - Accept-Encoding
+      X-App-Rate-Limit:
+      - 500:10,30000:600
+      X-App-Rate-Limit-Count:
+      - 16:10,208:600
+      X-Method-Rate-Limit:
+      - 20000:10,1200000:600
+      X-Method-Rate-Limit-Count:
+      - 4:10,56:600
+      X-Riot-Edge-Trace-Id:
+      - 6076e007-aec4-441c-8cac-619ab3a85f4c
+      Content-Length:
+      - '2'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version:
+  recorded_at: Thu, 22 Aug 2019 16:29:22 GMT
+- request:
+    method: get
+    uri: https://euw1.api.riotgames.com/lol/match/v4/matchlists/by-account/527N1B3AiYQ_Ud_WPcs0SXfT0_xzrtLXM2xjISJXwnee-Q
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Riot-Token:
+      - RIOT_API_KEY
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,Region,Cookie
+      Access-Control-Allow-Methods:
+      - GET,POST,OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Ray:
+      - 50a639a78c6ea669-DUB
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 22 Aug 2019 16:29:22 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Vary:
+      - Accept-Encoding
+      X-App-Rate-Limit:
+      - 500:10,30000:600
+      X-App-Rate-Limit-Count:
+      - 17:10,209:600
+      X-Method-Rate-Limit:
+      - '1000:10'
+      X-Method-Rate-Limit-Count:
+      - '3:10'
+      X-Riot-Edge-Trace-Id:
+      - b5ca841c-0771-4576-9235-d04aeb5e1b7c
+      Content-Length:
+      - '57'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"status":{"message":"Data not found","status_code":404}}'
+    http_version:
+  recorded_at: Thu, 22 Aug 2019 16:29:22 GMT
+- request:
+    method: get
+    uri: https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/KAlpQjRnwhQJ_eXZ0QxOEMEX-qK5_v7_TgZWJaHH1i-mG0g
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Riot-Token:
+      - RIOT_API_KEY
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - public, max-age=3600
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 22 Aug 2019  16:29:22 GMT
+      Vary:
+      - Accept-Encoding
+      X-App-Rate-Limit:
+      - 500:10,30000:600
+      X-App-Rate-Limit-Count:
+      - 18:10,210:600
+      X-Method-Rate-Limit:
+      - 300:60
+      X-Method-Rate-Limit-Count:
+      - 38:60
+      X-Riot-Edge-Trace-Id:
+      - 332f33f3-d779-43c6-8a97-dac5d1699084
+      Content-Length:
+      - '2'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version:
+  recorded_at: Thu, 22 Aug 2019 16:29:22 GMT
+recorded_with: VCR 4.0.0

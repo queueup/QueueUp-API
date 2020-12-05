@@ -1,0 +1,18 @@
+language: ruby
+rvm:
+  - 2.4.1
+bundler_args: "--jobs=2"
+cache: bundler
+env:
+  - "RAILS_ENV=test"
+services:
+  - postgresql
+before_script:
+  - cp .travis/database.yml config/database.yml
+  - chmod +x ./cc-test-reporter
+  - RAILS_ENV=test bundle exec rake db:create db:migrate
+script:
+  - bundle exec rspec
+  - rubocop
+addons:
+  postgresql: "9.6"

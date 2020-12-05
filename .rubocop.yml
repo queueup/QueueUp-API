@@ -1,0 +1,49 @@
+require: rubocop-rspec
+
+AllCops:
+  Exclude:
+  - 'bin/**/*'
+  - 'db/**/*'
+  - 'script/**/*'
+  - 'vendor/**/*'
+  TargetRubyVersion: 2.4
+
+Rails:
+  Enabled: true
+
+Lint/UriEscapeUnescape:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 40
+
+Metrics/BlockLength:
+  Max: 150
+  Exclude:
+  - 'spec/**/*'
+
+Metrics/ClassLength:
+  Max: 150
+
+Metrics/LineLength:
+  Max: 140
+
+Metrics/MethodLength:
+  Max: 60
+
+RSpec/DescribeClass:
+  Exclude:
+  - 'spec/integration/**/*'
+
+RSpec/EmptyExampleGroup:
+  Exclude:
+  - 'spec/integration/**/*'
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Max: 20
+
+Style/Documentation:
+  Enabled: false

@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.scoutsdk.com/graph
+    body:
+      encoding: UTF-8
+      string: '{"query":"      {        players(identifier: \"Ninja\", title: \"fortnite\")
+        {          results {            player {              playerId            }            persona
+        {              handle              platform {                slug              }              pictureUrl            }          }        }      }","variables":{}}'
+    headers:
+      Accept:
+      - application/com.scoutsdk.graph+json; version=1.1.0; charset=utf8
+      Content-Type:
+      - application/json
+      Scout-App:
+      - FORTNITE_API_KEY
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 22 Aug 2019 16:30:01 GMT
+      Content-Type:
+      - text/plain; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d814bdf0e591e659266ab167822a522071566491400; expires=Fri, 21-Aug-20
+        16:30:00 GMT; path=/; domain=.scoutsdk.com; HttpOnly
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 50a63a92a9473c6f-CDG
+    body:
+      encoding: UTF-8
+      string: '{"data":{"players":{"results":[{"player":{"playerId":"AQUACAFd0fHW8xYHSoVIciMMK9iG"},"persona":{"handle":"Ninja.","platform":{"slug":"epic"},"pictureUrl":null}},{"player":{"playerId":"AQUAAQFYz6aBceziTqEF+uvBnRfw"},"persona":{"handle":"ninja","platform":{"slug":"epic"},"pictureUrl":null}},{"player":{"playerId":"AgUACATYptzTLK3rTKqYHl2sK8/q"},"persona":{"handle":"Ninja","platform":{"slug":"epic"},"pictureUrl":null}},{"player":{"playerId":"AgUACAXYptzTLK3rTKqYHl2sK8/q"},"persona":{"handle":"Ninja","platform":{"slug":"epic"},"pictureUrl":null}},{"player":{"playerId":"AgUACAbYptzTLK3rTKqYHl2sK8/q"},"persona":{"handle":"Ninja","platform":{"slug":"epic"},"pictureUrl":null}}]}}}'
+    http_version:
+  recorded_at: Thu, 22 Aug 2019 16:30:01 GMT
+recorded_with: VCR 4.0.0

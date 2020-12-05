@@ -1,0 +1,2877 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "API V1",
+    "version": "v1"
+  },
+  "paths": {
+    "/v1/badges": {
+      "get": {
+        "summary": "Getting badges",
+        "tags": [
+          "Badges"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Getting Badges",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/badge"
+              },
+              "example": [
+                {
+                  "id": 1,
+                  "name": "bug-catcher",
+                  "level": null,
+                  "description": null,
+                  "custom_fields": null
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "/v1/badges/{id}": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "type": "integer",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Getting single badge",
+        "tags": [
+          "Badges"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Badge retrieved",
+            "schema": {
+              "$ref": "#/definitions/badge",
+              "example": {
+                "id": 1,
+                "name": "bug-catcher",
+                "level": null,
+                "description": null,
+                "custom_fields": null
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "schema": {
+              "$ref": "#/definitions/not_found_body"
+            }
+          }
+        }
+      }
+    },
+    "/v1/devices": {
+      "parameters": [
+        {
+          "name": "Access-Token",
+          "in": "header",
+          "required": true,
+          "description": "Session's Access-Token",
+          "type": "string"
+        },
+        {
+          "name": "Token-Type",
+          "in": "header",
+          "required": true,
+          "description": "Session's Token-Type",
+          "type": "string"
+        },
+        {
+          "name": "Client",
+          "in": "header",
+          "required": true,
+          "description": "Session's Client",
+          "type": "string"
+        },
+        {
+          "name": "Expiry",
+          "in": "header",
+          "required": true,
+          "description": "Session's Expiry",
+          "type": "string"
+        },
+        {
+          "name": "Uid",
+          "in": "header",
+          "required": true,
+          "description": "Session's Uid",
+          "type": "string"
+        }
+      ],
+      "get": {
+        "summary": "Getting Devices",
+        "tags": [
+          "Devices"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Getting Devices",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/device"
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Creating Device",
+        "tags": [
+          "Devices"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "device",
+            "in": "body",
+            "required": true,
+            "type": "object",
+            "properties": {
+              "player_id": {
+                "type": "string"
+              }
+            },
+            "example": {
+              "player_id": "00112233445566778899aabbccddeeff"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Device created",
+            "schema": {
+              "$ref": "#/definitions/device"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          },
+          "422": {
+            "description": "Unprocessable entity"
+          }
+        }
+      }
+    },
+    "/v1/devices/{id}": {
+      "parameters": [
+        {
+          "name": "Access-Token",
+          "in": "header",
+          "required": true,
+          "description": "Session's Access-Token",
+          "type": "string"
+        },
+        {
+          "name": "Token-Type",
+          "in": "header",
+          "required": true,
+          "description": "Session's Token-Type",
+          "type": "string"
+        },
+        {
+          "name": "Client",
+          "in": "header",
+          "required": true,
+          "description": "Session's Client",
+          "type": "string"
+        },
+        {
+          "name": "Expiry",
+          "in": "header",
+          "required": true,
+          "description": "Session's Expiry",
+          "type": "string"
+        },
+        {
+          "name": "Uid",
+          "in": "header",
+          "required": true,
+          "description": "Session's Uid",
+          "type": "string"
+        },
+        {
+          "name": "id",
+          "in": "path",
+          "type": "integer",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Getting Device",
+        "tags": [
+          "Devices"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Device retrieved",
+            "schema": {
+              "$ref": "#/definitions/device"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "schema": {
+              "$ref": "#/definitions/not_found_body"
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deleting Device",
+        "tags": [
+          "Devices"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "204": {
+            "description": "Device destroyed"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "schema": {
+              "$ref": "#/definitions/not_found_body"
+            }
+          }
+        }
+      }
+    },
+    "/v1/fortnite_profiles": {
+      "parameters": [
+        {
+          "name": "Access-Token",
+          "in": "header",
+          "required": true,
+          "description": "Session's Access-Token",
+          "type": "string"
+        },
+        {
+          "name": "Token-Type",
+          "in": "header",
+          "required": true,
+          "description": "Session's Token-Type",
+          "type": "string"
+        },
+        {
+          "name": "Client",
+          "in": "header",
+          "required": true,
+          "description": "Session's Client",
+          "type": "string"
+        },
+        {
+          "name": "Expiry",
+          "in": "header",
+          "required": true,
+          "description": "Session's Expiry",
+          "type": "string"
+        },
+        {
+          "name": "Uid",
+          "in": "header",
+          "required": true,
+          "description": "Session's Uid",
+          "type": "string"
+        }
+      ],
+      "post": {
+        "summary": "Creating Fortnite Profile",
+        "tags": [
+          "Fortnite",
+          "Fortnite Profiles"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "fortnite_profile",
+            "type": "object",
+            "description": "Fortnite Profile object",
+            "in": "body",
+            "properties": {
+              "handle": {
+                "type": "string"
+              }
+            },
+            "example": {
+              "handle": "SofianeG"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created Fortnite Profile",
+            "schema": {
+              "$ref": "#/definitions/fortnite_profile"
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity"
+          }
+        }
+      }
+    },
+    "/v1/fortnite_profiles/{id}": {
+      "parameters": [
+        {
+          "name": "Access-Token",
+          "in": "header",
+          "required": true,
+          "description": "Session's Access-Token",
+          "type": "string"
+        },
+        {
+          "name": "Token-Type",
+          "in": "header",
+          "required": true,
+          "description": "Session's Token-Type",
+          "type": "string"
+        },
+        {
+          "name": "Client",
+          "in": "header",
+          "required": true,
+          "description": "Session's Client",
+          "type": "string"
+        },
+        {
+          "name": "Expiry",
+          "in": "header",
+          "required": true,
+          "description": "Session's Expiry",
+          "type": "string"
+        },
+        {
+          "name": "Uid",
+          "in": "header",
+          "required": true,
+          "description": "Session's Uid",
+          "type": "string"
+        },
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "description": "Fortnite Profile id",
+          "type": "string",
+          "format": "uuid"
+        }
+      ],
+      "get": {
+        "summary": "Getting Fortnite Profile",
+        "tags": [
+          "Fortnite",
+          "Fortnite Profiles"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Fortnite Profile retrieved",
+            "schema": {
+              "$ref": "#/definitions/fortnite_profile"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "schema": {
+              "$ref": "#/definitions/not_found_body"
+            }
+          }
+        }
+      },
+      "patch": {
+        "summary": "Updating Fortnite Profile",
+        "tags": [
+          "Fortnite",
+          "Fortnite Profiles"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "fortnite_profile",
+            "type": "object",
+            "description": "Fortnite Profile object",
+            "in": "body",
+            "properties": {
+              "description": {
+                "type": "string",
+                "x-nullable": true
+              },
+              "fun": {
+                "type": "boolean"
+              }
+            },
+            "example": {
+              "description": "I am SofianeG",
+              "fun": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fortnite Profile updated",
+            "schema": {
+              "$ref": "#/definitions/fortnite_profile"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deleting Fortnite Profile",
+        "tags": [
+          "Fortnite",
+          "Fortnite Profiles"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "204": {
+            "description": "Fortnite profile destroyed"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "schema": {
+              "$ref": "#/definitions/not_found_body"
+            }
+          }
+        }
+      }
+    },
+    "/v1/fortnite_profiles/{id}/reload": {
+      "parameters": [
+        {
+          "name": "Access-Token",
+          "in": "header",
+          "required": true,
+          "description": "Session's Access-Token",
+          "type": "string"
+        },
+        {
+          "name": "Token-Type",
+          "in": "header",
+          "required": true,
+          "description": "Session's Token-Type",
+          "type": "string"
+        },
+        {
+          "name": "Client",
+          "in": "header",
+          "required": true,
+          "description": "Session's Client",
+          "type": "string"
+        },
+        {
+          "name": "Expiry",
+          "in": "header",
+          "required": true,
+          "description": "Session's Expiry",
+          "type": "string"
+        },
+        {
+          "name": "Uid",
+          "in": "header",
+          "required": true,
+          "description": "Session's Uid",
+          "type": "string"
+        },
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "description": "Fortnite Profile id",
+          "type": "string",
+          "format": "uuid"
+        }
+      ],
+      "patch": {
+        "summary": "Reloading Fortnite Profile",
+        "tags": [
+          "Fortnite",
+          "Fortnite Profiles"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Fortnite Profile updated",
+            "schema": {
+              "$ref": "#/definitions/fortnite_profile"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "schema": {
+              "$ref": "#/definitions/not_found_body"
+            }
+          }
+        }
+      }
+    },
+    "/v1/fortnite_profiles/{id}/by_handle": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "description": "Fortnite Profile Handle",
+          "type": "string"
+        }
+      ],
+      "get": {
+        "summary": "Getting Fortnite Profile",
+        "tags": [
+          "Fortnite",
+          "Fortnite Profiles"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Fortnite Profile retrieved",
+            "schema": {
+              "$ref": "#/definitions/fortnite_profile"
+            }
+          }
+        }
+      }
+    },
+    "/v1/game_profile_reports": {
+      "post": {
+        "summary": "Creating a game profile report",
+        "tags": [
+          "Game Profile Reports",
+          "Reports"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Access-Token",
+            "in": "header",
+            "required": true,
+            "description": "Session's Access-Token",
+            "type": "string"
+          },
+          {
+            "name": "Token-Type",
+            "in": "header",
+            "required": true,
+            "description": "Session's Token-Type",
+            "type": "string"
+          },
+          {
+            "name": "Client",
+            "in": "header",
+            "required": true,
+            "description": "Session's Client",
+            "type": "string"
+          },
+          {
+            "name": "Expiry",
+            "in": "header",
+            "required": true,
+            "description": "Session's Expiry",
+            "type": "string"
+          },
+          {
+            "name": "Uid",
+            "in": "header",
+            "required": true,
+            "description": "Session's Uid",
+            "type": "string"
+          },
+          {
+            "name": "game_profile_report",
+            "in": "body",
+            "required": true,
+            "$ref": "#/definitions/game_profile_report",
+            "example": {
+              "game_profile_id": "00112233-4455-6677-8899-aabbccddeeff",
+              "target_profile_id": "00112233-4455-6677-8899-aabbccddeeff",
+              "reason": "spam|bot|offensive|other",
+              "description": "Random description"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Report created",
+            "schema": {
+              "$ref": "#/definitions/game_profile_report"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          },
+          "422": {
+            "description": "Unprocessable entity"
+          }
+        }
+      }
+    },
+    "/v1/game_profile_scores": {
+      "parameters": [
+        {
+          "name": "Access-Token",
+          "in": "header",
+          "required": true,
+          "description": "Session's Access-Token",
+          "type": "string"
+        },
+        {
+          "name": "Token-Type",
+          "in": "header",
+          "required": true,
+          "description": "Session's Token-Type",
+          "type": "string"
+        },
+        {
+          "name": "Client",
+          "in": "header",
+          "required": true,
+          "description": "Session's Client",
+          "type": "string"
+        },
+        {
+          "name": "Expiry",
+          "in": "header",
+          "required": true,
+          "description": "Session's Expiry",
+          "type": "string"
+        },
+        {
+          "name": "Uid",
+          "in": "header",
+          "required": true,
+          "description": "Session's Uid",
+          "type": "string"
+        }
+      ],
+      "get": {
+        "summary": "Getting game profile scores",
+        "tags": [
+          "Game Profile Scores",
+          "Scoring"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "target_game_profile_id",
+            "type": "string",
+            "format": "uuid",
+            "description": "Filter by target game profile",
+            "in": "query"
+          },
+          {
+            "name": "score_id",
+            "type": "string",
+            "format": "uuid",
+            "description": "Filter by score",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retrieved created game profile scores",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "$ref": "#/definitions/game_profile_score"
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Creating game profile score",
+        "tags": [
+          "Game Profile Scores",
+          "Scoring"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "game_profile_score",
+            "in": "body",
+            "required": true,
+            "type": "object",
+            "properties": {
+              "game_profile_id": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "target_game_profile_id": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "score_id": {
+                "type": "string",
+                "format": "uuid"
+              }
+            },
+            "example": {
+              "game_profile_id": "00112233-4455-6677-8899-aabbccddeeff",
+              "target_game_profile_id": "00112233-4455-6677-8899-aabbccddeeff",
+              "score_id": "00112233-4455-6677-8899-aabbccddeeff"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Game profile score created",
+            "schema": {
+              "$ref": "#/definitions/game_profile_score"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          },
+          "422": {
+            "description": "Unprocessable entity"
+          }
+        }
+      }
+    },
+    "/v1/game_profile_scores/{id}": {
+      "parameters": [
+        {
+          "name": "Access-Token",
+          "in": "header",
+          "required": true,
+          "description": "Session's Access-Token",
+          "type": "string"
+        },
+        {
+          "name": "Token-Type",
+          "in": "header",
+          "required": true,
+          "description": "Session's Token-Type",
+          "type": "string"
+        },
+        {
+          "name": "Client",
+          "in": "header",
+          "required": true,
+          "description": "Session's Client",
+          "type": "string"
+        },
+        {
+          "name": "Expiry",
+          "in": "header",
+          "required": true,
+          "description": "Session's Expiry",
+          "type": "string"
+        },
+        {
+          "name": "Uid",
+          "in": "header",
+          "required": true,
+          "description": "Session's Uid",
+          "type": "string"
+        },
+        {
+          "name": "id",
+          "in": "path",
+          "type": "string",
+          "format": "uuid",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Getting game profile score",
+        "tags": [
+          "Game Profile Scores",
+          "Scoring"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Game profile score retrieved",
+            "schema": {
+              "$ref": "#/definitions/game_profile_score"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "schema": {
+              "$ref": "#/definitions/not_found_body"
+            }
+          }
+        }
+      },
+      "patch": {
+        "summary": "Updating game profile score",
+        "tags": [
+          "Game Profile Scores",
+          "Scoring"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "game_profile_score",
+            "in": "body",
+            "required": true,
+            "type": "object",
+            "properties": {
+              "game_profile_id": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "target_game_profile_id": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "score_id": {
+                "type": "string",
+                "format": "uuid"
+              }
+            },
+            "example": {
+              "game_profile_id": "00112233-4455-6677-8899-aabbccddeeff",
+              "target_game_profile_id": "00112233-4455-6677-8899-aabbccddeeff",
+              "score_id": "00112233-4455-6677-8899-aabbccddeeff"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Game profile score retrieved",
+            "schema": {
+              "$ref": "#/definitions/game_profile_score"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "schema": {
+              "$ref": "#/definitions/not_found_body"
+            }
+          },
+          "422": {
+            "description": "Unprocessable entity",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deleting game profile score",
+        "tags": [
+          "Game Profile Scores",
+          "Scoring"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "204": {
+            "description": "Game profile score destroyed"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "schema": {
+              "$ref": "#/definitions/not_found_body"
+            }
+          }
+        }
+      }
+    },
+    "/v1/game_profiles": {
+      "parameters": [
+        {
+          "name": "Access-Token",
+          "in": "header",
+          "required": true,
+          "description": "Session's Access-Token",
+          "type": "string"
+        },
+        {
+          "name": "Token-Type",
+          "in": "header",
+          "required": true,
+          "description": "Session's Token-Type",
+          "type": "string"
+        },
+        {
+          "name": "Client",
+          "in": "header",
+          "required": true,
+          "description": "Session's Client",
+          "type": "string"
+        },
+        {
+          "name": "Expiry",
+          "in": "header",
+          "required": true,
+          "description": "Session's Expiry",
+          "type": "string"
+        },
+        {
+          "name": "Uid",
+          "in": "header",
+          "required": true,
+          "description": "Session's Uid",
+          "type": "string"
+        }
+      ],
+      "get": {
+        "summary": "Getting game profiles",
+        "tags": [
+          "Game Profiles"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "resource_type",
+            "type": "string",
+            "format": "uuid",
+            "description": "Filter by resource type (LeagueOfLegendsProfile...)",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retrieved own game profiles",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "$ref": "#/definitions/game_profile"
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          }
+        }
+      }
+    },
+    "/v1/game_profiles/{id}": {
+      "parameters": [
+        {
+          "name": "Access-Token",
+          "in": "header",
+          "required": true,
+          "description": "Session's Access-Token",
+          "type": "string"
+        },
+        {
+          "name": "Token-Type",
+          "in": "header",
+          "required": true,
+          "description": "Session's Token-Type",
+          "type": "string"
+        },
+        {
+          "name": "Client",
+          "in": "header",
+          "required": true,
+          "description": "Session's Client",
+          "type": "string"
+        },
+        {
+          "name": "Expiry",
+          "in": "header",
+          "required": true,
+          "description": "Session's Expiry",
+          "type": "string"
+        },
+        {
+          "name": "Uid",
+          "in": "header",
+          "required": true,
+          "description": "Session's Uid",
+          "type": "string"
+        },
+        {
+          "name": "id",
+          "in": "path",
+          "type": "string",
+          "format": "uuid",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Getting game profile",
+        "tags": [
+          "Game Profiles"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Game profile retrieved",
+            "schema": {
+              "$ref": "#/definitions/game_profile"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "schema": {
+              "$ref": "#/definitions/not_found_body"
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deleting game profile",
+        "tags": [
+          "Game Profiles"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "204": {
+            "description": "Game profile destroyed"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "schema": {
+              "$ref": "#/definitions/not_found_body"
+            }
+          }
+        }
+      }
+    },
+    "/v1/interactions": {
+      "parameters": [
+        {
+          "name": "Access-Token",
+          "in": "header",
+          "required": true,
+          "description": "Session's Access-Token",
+          "type": "string"
+        },
+        {
+          "name": "Token-Type",
+          "in": "header",
+          "required": true,
+          "description": "Session's Token-Type",
+          "type": "string"
+        },
+        {
+          "name": "Client",
+          "in": "header",
+          "required": true,
+          "description": "Session's Client",
+          "type": "string"
+        },
+        {
+          "name": "Expiry",
+          "in": "header",
+          "required": true,
+          "description": "Session's Expiry",
+          "type": "string"
+        },
+        {
+          "name": "Uid",
+          "in": "header",
+          "required": true,
+          "description": "Session's Uid",
+          "type": "string"
+        }
+      ],
+      "post": {
+        "summary": "Creating interactions",
+        "tags": [
+          "Interactions"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "interaction",
+            "type": "object",
+            "description": "Interaction object",
+            "in": "body",
+            "properties": {
+              "game_profile_id": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "target_id": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "liked": {
+                "type": "boolean"
+              }
+            },
+            "example": {
+              "game_profile_id": "00112233-4455-6677-8899-aabbccddeeff",
+              "target_id": "00112233-4455-6677-8899-aabbccddeeff",
+              "liked": true
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created interaction",
+            "schema": {
+              "$ref": "#/definitions/interaction"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "422": {
+            "description": "Unprocessable entity",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/v1/league_of_legends_profiles": {
+      "parameters": [
+        {
+          "name": "Access-Token",
+          "in": "header",
+          "required": true,
+          "description": "Session's Access-Token",
+          "type": "string"
+        },
+        {
+          "name": "Token-Type",
+          "in": "header",
+          "required": true,
+          "description": "Session's Token-Type",
+          "type": "string"
+        },
+        {
+          "name": "Client",
+          "in": "header",
+          "required": true,
+          "description": "Session's Client",
+          "type": "string"
+        },
+        {
+          "name": "Expiry",
+          "in": "header",
+          "required": true,
+          "description": "Session's Expiry",
+          "type": "string"
+        },
+        {
+          "name": "Uid",
+          "in": "header",
+          "required": true,
+          "description": "Session's Uid",
+          "type": "string"
+        }
+      ],
+      "post": {
+        "summary": "Creating LoL Profile",
+        "tags": [
+          "League of Legends",
+          "League of Legends Profiles"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "league_of_legends_profile",
+            "type": "object",
+            "description": "LoL Profile object",
+            "in": "body",
+            "properties": {
+              "summoner_name": {
+                "type": "string"
+              },
+              "region": {
+                "type": "string"
+              }
+            },
+            "example": {
+              "summoner_name": "Sarcastique",
+              "region": "EUW"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created LoL Profile",
+            "schema": {
+              "$ref": "#/definitions/league_of_legends_profile"
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "schema": {
+              "$ref": "#/definitions/not_found_body"
+            }
+          }
+        }
+      }
+    },
+    "/v1/league_of_legends_profiles/{id}": {
+      "parameters": [
+        {
+          "name": "Access-Token",
+          "in": "header",
+          "required": true,
+          "description": "Session's Access-Token",
+          "type": "string"
+        },
+        {
+          "name": "Token-Type",
+          "in": "header",
+          "required": true,
+          "description": "Session's Token-Type",
+          "type": "string"
+        },
+        {
+          "name": "Client",
+          "in": "header",
+          "required": true,
+          "description": "Session's Client",
+          "type": "string"
+        },
+        {
+          "name": "Expiry",
+          "in": "header",
+          "required": true,
+          "description": "Session's Expiry",
+          "type": "string"
+        },
+        {
+          "name": "Uid",
+          "in": "header",
+          "required": true,
+          "description": "Session's Uid",
+          "type": "string"
+        },
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "description": "LoL Profile id",
+          "type": "string",
+          "format": "uuid"
+        }
+      ],
+      "get": {
+        "summary": "Getting LoL Profile",
+        "tags": [
+          "League of Legends",
+          "League of Legends Profiles"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "LoL Profile retrieved",
+            "schema": {
+              "$ref": "#/definitions/league_of_legends_profile"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "schema": {
+              "$ref": "#/definitions/not_found_body"
+            }
+          }
+        }
+      },
+      "patch": {
+        "summary": "Updating LoL Profile",
+        "tags": [
+          "League of Legends",
+          "League of Legends Profiles"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "league_of_legends_profile",
+            "type": "object",
+            "description": "LoL Profile object",
+            "in": "body",
+            "properties": {
+              "description": {
+                "type": "string",
+                "x-nullable": true
+              },
+              "champions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "roles": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "example": {
+              "description": "I am Sarcastique",
+              "champions": [
+                "121",
+                "132",
+                "12"
+              ],
+              "roles": [
+                "TOP",
+                "BOTTOM"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "LoL Profile updated",
+            "schema": {
+              "$ref": "#/definitions/league_of_legends_profile"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deleting LoL Profile",
+        "tags": [
+          "League of Legends",
+          "League of Legends Profiles"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "204": {
+            "description": "LoL profile destroyed"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "schema": {
+              "$ref": "#/definitions/not_found_body"
+            }
+          }
+        }
+      }
+    },
+    "/v1/league_of_legends_profiles/{id}/reload": {
+      "parameters": [
+        {
+          "name": "Access-Token",
+          "in": "header",
+          "required": true,
+          "description": "Session's Access-Token",
+          "type": "string"
+        },
+        {
+          "name": "Token-Type",
+          "in": "header",
+          "required": true,
+          "description": "Session's Token-Type",
+          "type": "string"
+        },
+        {
+          "name": "Client",
+          "in": "header",
+          "required": true,
+          "description": "Session's Client",
+          "type": "string"
+        },
+        {
+          "name": "Expiry",
+          "in": "header",
+          "required": true,
+          "description": "Session's Expiry",
+          "type": "string"
+        },
+        {
+          "name": "Uid",
+          "in": "header",
+          "required": true,
+          "description": "Session's Uid",
+          "type": "string"
+        },
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "description": "LoL Profile id",
+          "type": "string",
+          "format": "uuid"
+        }
+      ],
+      "patch": {
+        "summary": "Reloading LoL Profile",
+        "tags": [
+          "League of Legends",
+          "League of Legends Profiles"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "LoL Profile updated",
+            "schema": {
+              "$ref": "#/definitions/league_of_legends_profile"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "schema": {
+              "$ref": "#/definitions/not_found_body"
+            }
+          }
+        }
+      }
+    },
+    "/v1/league_of_legends_profiles/{region}/{summoner_name}": {
+      "parameters": [
+        {
+          "name": "region",
+          "in": "path",
+          "required": true,
+          "description": "LoL Profile region",
+          "type": "string"
+        },
+        {
+          "name": "summoner_name",
+          "in": "path",
+          "required": true,
+          "description": "LoL Profile summoner name",
+          "type": "string"
+        }
+      ],
+      "get": {
+        "summary": "Getting LoL Profile",
+        "tags": [
+          "League of Legends",
+          "League of Legends Profiles"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "LoL Profile retrieved",
+            "schema": {
+              "$ref": "#/definitions/league_of_legends_profile"
+            }
+          }
+        }
+      }
+    },
+    "/v1/matches": {
+      "parameters": [
+        {
+          "name": "Access-Token",
+          "in": "header",
+          "required": true,
+          "description": "Session's Access-Token",
+          "type": "string"
+        },
+        {
+          "name": "Token-Type",
+          "in": "header",
+          "required": true,
+          "description": "Session's Token-Type",
+          "type": "string"
+        },
+        {
+          "name": "Client",
+          "in": "header",
+          "required": true,
+          "description": "Session's Client",
+          "type": "string"
+        },
+        {
+          "name": "Expiry",
+          "in": "header",
+          "required": true,
+          "description": "Session's Expiry",
+          "type": "string"
+        },
+        {
+          "name": "Uid",
+          "in": "header",
+          "required": true,
+          "description": "Session's Uid",
+          "type": "string"
+        }
+      ],
+      "get": {
+        "summary": "Getting Matches",
+        "tags": [
+          "Matches"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "game_profile_id",
+            "type": "string",
+            "format": "uuid",
+            "description": "Filter by game profile",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retrieved matches",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "$ref": "#/definitions/match"
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          }
+        }
+      }
+    },
+    "/v1/matches/{id}": {
+      "parameters": [
+        {
+          "name": "Access-Token",
+          "in": "header",
+          "required": true,
+          "description": "Session's Access-Token",
+          "type": "string"
+        },
+        {
+          "name": "Token-Type",
+          "in": "header",
+          "required": true,
+          "description": "Session's Token-Type",
+          "type": "string"
+        },
+        {
+          "name": "Client",
+          "in": "header",
+          "required": true,
+          "description": "Session's Client",
+          "type": "string"
+        },
+        {
+          "name": "Expiry",
+          "in": "header",
+          "required": true,
+          "description": "Session's Expiry",
+          "type": "string"
+        },
+        {
+          "name": "Uid",
+          "in": "header",
+          "required": true,
+          "description": "Session's Uid",
+          "type": "string"
+        },
+        {
+          "name": "id",
+          "in": "path",
+          "type": "string",
+          "format": "uuid",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Getting match",
+        "tags": [
+          "Matches"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Match retrieved",
+            "schema": {
+              "$ref": "#/definitions/match"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "schema": {
+              "$ref": "#/definitions/not_found_body"
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deleting match",
+        "tags": [
+          "Matches"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "204": {
+            "description": "Match destroyed"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "schema": {
+              "$ref": "#/definitions/not_found_body"
+            }
+          }
+        }
+      }
+    },
+    "/v1/messages": {
+      "parameters": [
+        {
+          "name": "Access-Token",
+          "in": "header",
+          "required": true,
+          "description": "Session's Access-Token",
+          "type": "string"
+        },
+        {
+          "name": "Token-Type",
+          "in": "header",
+          "required": true,
+          "description": "Session's Token-Type",
+          "type": "string"
+        },
+        {
+          "name": "Client",
+          "in": "header",
+          "required": true,
+          "description": "Session's Client",
+          "type": "string"
+        },
+        {
+          "name": "Expiry",
+          "in": "header",
+          "required": true,
+          "description": "Session's Expiry",
+          "type": "string"
+        },
+        {
+          "name": "Uid",
+          "in": "header",
+          "required": true,
+          "description": "Session's Uid",
+          "type": "string"
+        }
+      ],
+      "get": {
+        "summary": "Getting Messages",
+        "tags": [
+          "Messages"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "match_id",
+            "type": "string",
+            "format": "uuid",
+            "description": "Filter by match",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retrieved messages",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "$ref": "#/definitions/message"
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Creating Message",
+        "tags": [
+          "Messages"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "message",
+            "in": "body",
+            "required": true,
+            "type": "object",
+            "properties": {
+              "game_profile_id": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "content": {
+                "type": "string"
+              },
+              "match_id": {
+                "type": "string",
+                "format": "uuid"
+              }
+            },
+            "example": {
+              "game_profile_id": "00112233-4455-6677-8899-aabbccddeeff",
+              "content": "This is the message",
+              "score_id": "00112233-4455-6677-8899-aabbccddeeff"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Message created",
+            "schema": {
+              "$ref": "#/definitions/message"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "422": {
+            "description": "Unprocessable entity"
+          }
+        }
+      }
+    },
+    "/v1/messages/{id}": {
+      "parameters": [
+        {
+          "name": "Access-Token",
+          "in": "header",
+          "required": true,
+          "description": "Session's Access-Token",
+          "type": "string"
+        },
+        {
+          "name": "Token-Type",
+          "in": "header",
+          "required": true,
+          "description": "Session's Token-Type",
+          "type": "string"
+        },
+        {
+          "name": "Client",
+          "in": "header",
+          "required": true,
+          "description": "Session's Client",
+          "type": "string"
+        },
+        {
+          "name": "Expiry",
+          "in": "header",
+          "required": true,
+          "description": "Session's Expiry",
+          "type": "string"
+        },
+        {
+          "name": "Uid",
+          "in": "header",
+          "required": true,
+          "description": "Session's Uid",
+          "type": "string"
+        },
+        {
+          "name": "id",
+          "in": "path",
+          "type": "string",
+          "format": "uuid",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Getting Message",
+        "tags": [
+          "Messages"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Message retrieved",
+            "schema": {
+              "$ref": "#/definitions/message"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "schema": {
+              "$ref": "#/definitions/not_found_body"
+            }
+          }
+        }
+      }
+    },
+    "/v1/scores": {
+      "get": {
+        "summary": "Getting Scores",
+        "tags": [
+          "Scores",
+          "Scoring"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Retrieved scores",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "$ref": "#/definitions/score"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/scores/{id}": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "type": "string",
+          "format": "uuid",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Getting Score",
+        "tags": [
+          "Scores",
+          "Scoring"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Score retrieved",
+            "schema": {
+              "$ref": "#/definitions/score"
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "schema": {
+              "$ref": "#/definitions/not_found_body"
+            }
+          }
+        }
+      }
+    },
+    "/v1/suggestions": {
+      "parameters": [
+        {
+          "name": "Access-Token",
+          "in": "header",
+          "required": true,
+          "description": "Session's Access-Token",
+          "type": "string"
+        },
+        {
+          "name": "Token-Type",
+          "in": "header",
+          "required": true,
+          "description": "Session's Token-Type",
+          "type": "string"
+        },
+        {
+          "name": "Client",
+          "in": "header",
+          "required": true,
+          "description": "Session's Client",
+          "type": "string"
+        },
+        {
+          "name": "Expiry",
+          "in": "header",
+          "required": true,
+          "description": "Session's Expiry",
+          "type": "string"
+        },
+        {
+          "name": "Uid",
+          "in": "header",
+          "required": true,
+          "description": "Session's Uid",
+          "type": "string"
+        }
+      ],
+      "get": {
+        "summary": "Getting Suggestions",
+        "tags": [
+          "Suggestions"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "game_profile_id",
+            "in": "query",
+            "required": true,
+            "description": "Suggestions target",
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retrieved Suggestions",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "$ref": "#/definitions/game_profile"
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/not_found_body"
+            }
+          }
+        }
+      }
+    },
+    "/v1/user": {
+      "parameters": [
+        {
+          "name": "Access-Token",
+          "in": "header",
+          "required": true,
+          "description": "Session's Access-Token",
+          "type": "string"
+        },
+        {
+          "name": "Token-Type",
+          "in": "header",
+          "required": true,
+          "description": "Session's Token-Type",
+          "type": "string"
+        },
+        {
+          "name": "Client",
+          "in": "header",
+          "required": true,
+          "description": "Session's Client",
+          "type": "string"
+        },
+        {
+          "name": "Expiry",
+          "in": "header",
+          "required": true,
+          "description": "Session's Expiry",
+          "type": "string"
+        },
+        {
+          "name": "Uid",
+          "in": "header",
+          "required": true,
+          "description": "Session's Uid",
+          "type": "string"
+        }
+      ],
+      "get": {
+        "summary": "Getting User",
+        "tags": [
+          "Users"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "User retrieved",
+            "schema": {
+              "$ref": "#/definitions/user"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          }
+        }
+      },
+      "patch": {
+        "summary": "Updating User",
+        "tags": [
+          "Users"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "user",
+            "type": "object",
+            "properties": {
+              "favorite_badge": {
+                "type": "string"
+              },
+              "locales": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "example": {
+              "favorite_badge": "",
+              "locales": [
+                "en-GB",
+                "fr-FR"
+              ]
+            },
+            "in": "body",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User Updated",
+            "schema": {
+              "$ref": "#/definitions/user"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/unauthorized_body"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "badge": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "level": {
+          "type": "integer",
+          "x-nullable": true
+        },
+        "description": {
+          "type": "string",
+          "x-nullable": true
+        },
+        "custom_fields": {
+          "type": "object",
+          "x-nullable": true
+        }
+      }
+    },
+    "device": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "player_id": {
+          "type": "string"
+        },
+        "user": {
+          "$ref": "#/definitions/user"
+        }
+      }
+    },
+    "fortnite_profile": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "handle": {
+          "type": "string"
+        },
+        "platform": {
+          "type": "string"
+        },
+        "picture_url": {
+          "type": "string",
+          "x-nullable": true
+        },
+        "description": {
+          "type": "string",
+          "x-nullable": true
+        },
+        "duo": {
+          "type": "boolean",
+          "x-nullable": true
+        },
+        "squad": {
+          "type": "boolean",
+          "x-nullable": true
+        },
+        "fun": {
+          "type": "boolean",
+          "x-nullable": true
+        },
+        "try_hard": {
+          "type": "boolean",
+          "x-nullable": true
+        },
+        "kills_solo": {
+          "type": "number",
+          "x-nullable": true
+        },
+        "kills_duo": {
+          "type": "number",
+          "x-nullable": true
+        },
+        "kills_squad": {
+          "type": "number",
+          "x-nullable": true
+        },
+        "kd_solo": {
+          "type": "number",
+          "x-nullable": true
+        },
+        "kd_duo": {
+          "type": "number",
+          "x-nullable": true
+        },
+        "kd_squad": {
+          "type": "number",
+          "x-nullable": true
+        },
+        "played_solo": {
+          "type": "number",
+          "x-nullable": true
+        },
+        "played_duo": {
+          "type": "number",
+          "x-nullable": true
+        },
+        "played_squad": {
+          "type": "number",
+          "x-nullable": true
+        },
+        "scout_updated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "game_profile_id": {
+          "type": "string",
+          "format": "uuid",
+          "x-nullable": true
+        }
+      }
+    },
+    "game_profile": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "resource_type": {
+          "type": "string",
+          "enum": [
+            "LeagueOfLegendsProfile",
+            "FortniteProfile"
+          ]
+        },
+        "scores": {
+          "type": "object"
+        },
+        "resource": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/league_of_legends_profile"
+            },
+            {
+              "$ref": "#/definitions/fortnite_profile"
+            }
+          ]
+        },
+        "user": {
+          "$ref": "#/definitions/user_light"
+        }
+      }
+    },
+    "game_profile_report": {
+      "type": "object",
+      "properties": {
+        "game_profile_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "target_profile_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "reason": {
+          "type": "string",
+          "enum": [
+            "spam",
+            "bot",
+            "offensive",
+            "other"
+          ]
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "game_profile_score": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "score": {
+          "$ref": "#/definitions/score"
+        }
+      }
+    },
+    "interaction": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "liked": {
+          "type": "boolean"
+        },
+        "game_profile": {
+          "$ref": "#/definitions/game_profile"
+        },
+        "target": {
+          "$ref": "#/definitions/game_profile"
+        }
+      }
+    },
+    "league_of_legends_position": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "rank": {
+          "type": "string"
+        },
+        "queue_type": {
+          "type": "string"
+        },
+        "hot_streak": {
+          "type": "string"
+        },
+        "wins": {
+          "type": "string"
+        },
+        "veteran": {
+          "type": "string"
+        },
+        "losses": {
+          "type": "string"
+        },
+        "fresh_blood": {
+          "type": "string"
+        },
+        "league_id": {
+          "type": "string"
+        },
+        "player_or_team_name": {
+          "type": "string"
+        },
+        "inactive": {
+          "type": "string"
+        },
+        "player_or_team_id": {
+          "type": "string"
+        },
+        "league_name": {
+          "type": "string"
+        },
+        "tier": {
+          "type": "string"
+        },
+        "league_point": {
+          "type": "string"
+        }
+      }
+    },
+    "league_of_legends_profile": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "summoner_name": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        },
+        "champions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "profile_icon_id": {
+          "type": "integer"
+        },
+        "profile_icon_url": {
+          "type": "string"
+        },
+        "summoner_level": {
+          "type": "integer"
+        },
+        "description": {
+          "type": "string",
+          "x-nullable": true
+        },
+        "riot_updated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "game_profile_id": {
+          "type": "string",
+          "format": "uuid",
+          "x-nullable": true
+        }
+      }
+    },
+    "match": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "last_message": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/message"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "game_profiles": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/game_profile"
+          }
+        },
+        "match_memberships": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/match_membership"
+          }
+        }
+      }
+    },
+    "match_membership": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "game_profile": {
+          "$ref": "#/definitions/game_profile"
+        },
+        "match_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "messages_read_at": {
+          "type": "string",
+          "format": "date-time",
+          "x-nullable": true
+        }
+      }
+    },
+    "message": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "content": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "match_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "game_profile": {
+          "$ref": "#/definitions/game_profile"
+        },
+        "match_memberships": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/match_membership"
+          }
+        }
+      }
+    },
+    "score": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "key": {
+          "type": "string"
+        },
+        "positive": {
+          "type": "boolean"
+        }
+      }
+    },
+    "user": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "badges": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/badge"
+          }
+        },
+        "facebook_id": {
+          "type": "string",
+          "x-nullable": true
+        },
+        "google_id": {
+          "type": "string",
+          "x-nullable": true
+        },
+        "game_profiles": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/game_profile"
+          }
+        },
+        "favorite_badge": {
+          "type": "string",
+          "x-nullable": true
+        },
+        "locales": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "user_light": {
+      "type": "object",
+      "properties": {
+        "badges": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/badge"
+          }
+        },
+        "favorite_badge": {
+          "type": "string",
+          "x-nullable": true
+        },
+        "locales": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "not_found_body": {
+      "type": "string",
+      "x-nullable": true,
+      "example": ""
+    },
+    "unauthorized_body": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "errors": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "type": "string",
+          "x-nullable": true
+        }
+      ]
+    }
+  }
+}

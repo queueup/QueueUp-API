@@ -1,0 +1,2 @@
+ignore:
+- app/workers/*_notification_worker.rb

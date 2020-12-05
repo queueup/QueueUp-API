@@ -1,0 +1,123 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.scoutsdk.com/graph
+    body:
+      encoding: UTF-8
+      string: '{"query":"      {        players(identifier: \"SofianeG\", title: \"fortnite\")
+        {          results {            player {              playerId            }            persona
+        {              handle              platform {                slug              }              pictureUrl            }          }        }      }","variables":{}}'
+    headers:
+      Accept:
+      - application/com.scoutsdk.graph+json; version=1.1.0; charset=utf8
+      Content-Type:
+      - application/json
+      Scout-App:
+      - FORTNITE_API_KEY
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 22 Aug 2019 16:28:22 GMT
+      Content-Type:
+      - text/plain; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dd6691c60d8e0914e8de27dc57c6947161566491296; expires=Fri, 21-Aug-20
+        16:28:16 GMT; path=/; domain=.scoutsdk.com; HttpOnly
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 50a6380d3e67cd8f-CDG
+    body:
+      encoding: UTF-8
+      string: '{"data":{"players":{"results":[{"player":{"playerId":"AQUACAEFnUzKpjlgTovbo6oZmrq3"},"persona":{"handle":"SofianeG","platform":{"slug":"epic"},"pictureUrl":null}},{"player":{"playerId":"AgUACAQFnUzKpjlgTovbo6oZmrq3"},"persona":{"handle":"SofianeG","platform":{"slug":"epic"},"pictureUrl":null}},{"player":{"playerId":"AgUACAUFnUzKpjlgTovbo6oZmrq3"},"persona":{"handle":"SofianeG","platform":{"slug":"epic"},"pictureUrl":null}},{"player":{"playerId":"AgUACAYFnUzKpjlgTovbo6oZmrq3"},"persona":{"handle":"SofianeG","platform":{"slug":"epic"},"pictureUrl":null}}]}}}'
+    http_version:
+  recorded_at: Thu, 22 Aug 2019 16:28:22 GMT
+- request:
+    method: post
+    uri: https://api.scoutsdk.com/graph
+    body:
+      encoding: UTF-8
+      string: '{"query":"      {        player(title: \"fortnite\", id: \"AQUACAEFnUzKpjlgTovbo6oZmrq3\",
+        segment: \"alltime\") {          segments {            metadata {              key              name              value              displayValue            }            stats
+        {              metadata {                key                name                isReversed              }              value              displayValue            }          }        }      }","variables":{}}'
+    headers:
+      Accept:
+      - application/com.scoutsdk.graph+json; version=1.1.0; charset=utf8
+      Content-Type:
+      - application/json
+      Scout-App:
+      - FORTNITE_API_KEY
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 22 Aug 2019 16:28:22 GMT
+      Content-Type:
+      - text/plain; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d6731a6763d987e27b4b08c7100e87c6b1566491302; expires=Fri, 21-Aug-20
+        16:28:22 GMT; path=/; domain=.scoutsdk.com; HttpOnly
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 50a6382f9cf53c7b-CDG
+    body:
+      encoding: UTF-8
+      string: '{"data":{"player":{"segments":[{"metadata":[{"key":"segment","name":"Segment","value":"p10.br.m0.alltime","displayValue":"Duo
+        (All-Time)"},{"key":"lastPlayedAt","name":"Last Played At","value":"2019-01-13T19:26:44Z","displayValue":"1/13/19
+        7:26:44 PM"},{"key":"updatedAt","name":"Updated At","value":"2019-08-22T16:28:05.6312742Z","displayValue":"8/22/19
+        4:28:05 PM"}],"stats":[{"metadata":{"key":"kills","name":"Kills","isReversed":false},"value":2,"displayValue":"2"},{"metadata":{"key":"score","name":"Score","isReversed":false},"value":1315,"displayValue":"1,315"},{"metadata":{"key":"matchesPlayed","name":"Matches
+        Played","isReversed":false},"value":14,"displayValue":"14"},{"metadata":{"key":"minutesPlayed","name":"Minutes
+        Played","isReversed":false},"value":0,"displayValue":"0"},{"metadata":{"key":"timePlayed","name":"Time
+        Played","isReversed":false},"value":0,"displayValue":"0"},{"metadata":{"key":"placeTop1","name":"Wins","isReversed":false},"value":0,"displayValue":"0"},{"metadata":{"key":"placeTop3","name":"Top
+        3 Placings","isReversed":false},"value":0,"displayValue":"0"},{"metadata":{"key":"placeTop6","name":"Top
+        6 Placings","isReversed":false},"value":0,"displayValue":"0"},{"metadata":{"key":"placeTop12","name":"Top
+        12 Placings","isReversed":false},"value":1,"displayValue":"1"},{"metadata":{"key":"placeTop25","name":"Top
+        25 Placings","isReversed":false},"value":0,"displayValue":"0"},{"metadata":{"key":"playersOutlived","name":"Players
+        Outlived","isReversed":false},"value":0,"displayValue":"0"},{"metadata":{"key":"killDeathRatio","name":"K/D","isReversed":false},"value":0.142857149,"displayValue":"0"},{"metadata":{"key":"winRate","name":"Win
+        %","isReversed":false},"value":0.0,"displayValue":"0"}]},{"metadata":[{"key":"segment","name":"Segment","value":"p9.br.m0.alltime","displayValue":"Squad
+        (All-Time)"},{"key":"lastPlayedAt","name":"Last Played At","value":"2019-01-13T19:17:57Z","displayValue":"1/13/19
+        7:17:57 PM"},{"key":"updatedAt","name":"Updated At","value":"2019-08-22T16:28:05.6312775Z","displayValue":"8/22/19
+        4:28:05 PM"}],"stats":[{"metadata":{"key":"kills","name":"Kills","isReversed":false},"value":5,"displayValue":"5"},{"metadata":{"key":"score","name":"Score","isReversed":false},"value":4734,"displayValue":"4,734"},{"metadata":{"key":"matchesPlayed","name":"Matches
+        Played","isReversed":false},"value":29,"displayValue":"29"},{"metadata":{"key":"minutesPlayed","name":"Minutes
+        Played","isReversed":false},"value":0,"displayValue":"0"},{"metadata":{"key":"timePlayed","name":"Time
+        Played","isReversed":false},"value":0,"displayValue":"0"},{"metadata":{"key":"placeTop1","name":"Wins","isReversed":false},"value":1,"displayValue":"1"},{"metadata":{"key":"placeTop3","name":"Top
+        3 Placings","isReversed":false},"value":4,"displayValue":"4"},{"metadata":{"key":"placeTop6","name":"Top
+        6 Placings","isReversed":false},"value":5,"displayValue":"5"},{"metadata":{"key":"placeTop12","name":"Top
+        12 Placings","isReversed":false},"value":0,"displayValue":"0"},{"metadata":{"key":"placeTop25","name":"Top
+        25 Placings","isReversed":false},"value":0,"displayValue":"0"},{"metadata":{"key":"playersOutlived","name":"Players
+        Outlived","isReversed":false},"value":0,"displayValue":"0"},{"metadata":{"key":"killDeathRatio","name":"K/D","isReversed":false},"value":0.178571433,"displayValue":"0"},{"metadata":{"key":"winRate","name":"Win
+        %","isReversed":false},"value":0.03448276,"displayValue":"0"}]},{"metadata":[{"key":"segment","name":"Segment","value":"p2.br.m0.alltime","displayValue":"Solo
+        (All-Time)"},{"key":"lastPlayedAt","name":"Last Played At","value":"2018-12-14T11:38:50Z","displayValue":"12/14/18
+        11:38:50 AM"},{"key":"updatedAt","name":"Updated At","value":"2019-08-22T16:28:05.6312725Z","displayValue":"8/22/19
+        4:28:05 PM"}],"stats":[{"metadata":{"key":"kills","name":"Kills","isReversed":false},"value":1,"displayValue":"1"},{"metadata":{"key":"score","name":"Score","isReversed":false},"value":1139,"displayValue":"1,139"},{"metadata":{"key":"matchesPlayed","name":"Matches
+        Played","isReversed":false},"value":8,"displayValue":"8"},{"metadata":{"key":"minutesPlayed","name":"Minutes
+        Played","isReversed":false},"value":0,"displayValue":"0"},{"metadata":{"key":"timePlayed","name":"Time
+        Played","isReversed":false},"value":0,"displayValue":"0"},{"metadata":{"key":"placeTop1","name":"Wins","isReversed":false},"value":0,"displayValue":"0"},{"metadata":{"key":"placeTop3","name":"Top
+        3 Placings","isReversed":false},"value":0,"displayValue":"0"},{"metadata":{"key":"placeTop6","name":"Top
+        6 Placings","isReversed":false},"value":0,"displayValue":"0"},{"metadata":{"key":"placeTop12","name":"Top
+        12 Placings","isReversed":false},"value":0,"displayValue":"0"},{"metadata":{"key":"placeTop25","name":"Top
+        25 Placings","isReversed":false},"value":4,"displayValue":"4"},{"metadata":{"key":"playersOutlived","name":"Players
+        Outlived","isReversed":false},"value":0,"displayValue":"0"},{"metadata":{"key":"killDeathRatio","name":"K/D","isReversed":false},"value":0.125,"displayValue":"0"},{"metadata":{"key":"winRate","name":"Win
+        %","isReversed":false},"value":0.0,"displayValue":"0"}]}]}}}'
+    http_version:
+  recorded_at: Thu, 22 Aug 2019 16:28:22 GMT
+recorded_with: VCR 4.0.0
